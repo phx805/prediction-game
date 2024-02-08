@@ -1,12 +1,14 @@
-import { ConnectButton } from '@rainbow-me/rainbowkit';
 import Picks from './componets/Picks';
+import Landing from './componets/Landing';
+import Header from './componets/Header';
 
 export default function Home() {
   return (
-    <>
-    <div><ConnectButton /></div>
+    <><Header />
+    <div className="md:grid md:grid-flow-col">
+    <Landing />
     <Picks />
-
+    </div>
     </>
   );
 }

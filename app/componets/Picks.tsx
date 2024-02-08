@@ -7,6 +7,7 @@ import { NFTStorage, File } from "nft.storage";
 import { useAccount, useContractWrite } from "wagmi";
 import { abi } from "../utils/Web3LegendsABI";
 import { parseEther } from "viem";
+import Footer from "./Footer";
 
 
 function Picks() {
@@ -215,9 +216,9 @@ function chooseRandomImageURI() {
       <div className="m-4 max-w-xs max-h-80 flex items-center py-4 flex-col rounded-xl bg-neutral-800 shadow-slate">
         <h1 className="text-white text-xl font-medium">NA</h1>
     <div className="flex justify-center">
-      <fieldset className="p-2 mx-2 w-64 rounded-xl flex flex-col text-white bg-gradient-to-tl from-violet-700 shadow-neon">
+      <fieldset className="p-2 mx-2 w-64 rounded-xl flex flex-col text-white bg-gradient-to-tl from-red-600 shadow-neon">
         <legend className="text-center text-xl font-medium">Tournament</legend>
-        <select required className="text-black focus:ring-redd-700" name="id" defaultValue={'DEFAULT'} onChange={(event) => setTournament(event.target.value)}>
+        <select required className="text-black focus:ring-redd-600" name="id" defaultValue={'DEFAULT'} onChange={(event) => setTournament(event.target.value)}>
         <option value="DEFAULT" disabled>Select Tournament</option>
           <option>Split 1: Feb 4th, AvsB</option>
           <option>Split 1: Feb 10th, AvsC</option>
@@ -232,26 +233,26 @@ function chooseRandomImageURI() {
       
 
     
-      <fieldset className="p-2 w-64 rounded-xl flex flex-col text-white bg-gradient-to-tl from-violet-700 shadow-neon">
+      <fieldset className="p-2 w-64 rounded-xl flex flex-col text-white bg-gradient-to-tl from-red-600 shadow-neon">
         <legend>1st Place</legend>
         <label htmlFor="g1First">select team</label>
-        <input required className="text-black p-1 rounded-lg focus:border-redd-700" type="text" name="Game1-1st" id="g1First" list="proTeams" placeholder="pick team" onChange={(event) => setTeam1(event.target.value)}/>
+        <input required className="text-black p-1 rounded-lg focus:border-redd-600" type="text" name="Game1-1st" id="g1First" list="proTeams" placeholder="pick team" onChange={(event) => setTeam1(event.target.value)}/>
         
         <label htmlFor="g1Second">Total Points</label>
-        <input required className="text-black p-1 rounded-lg focus:border-redd-700" type="number" name="Game1-2nd" id="g1Second" placeholder="Score" onChange={(event) => setScore(event.target.value)}/>
+        <input required className="text-black p-1 rounded-lg focus:border-redd-600" type="number" name="Game1-2nd" id="g1Second" placeholder="Score" onChange={(event) => setScore(event.target.value)}/>
         
      
       </fieldset>
       </div>
 
-      <h2 className="mt-2 text-center text-white">3 Matic</h2>
+      <h2 className="mt-2 text-center text-white">Avax</h2>
 
     <div className="">
-      <button className="text-white px-6 py-2 cursor-pointer hover:scale-110 rounded bg-gradient-to-b from-violet-700 shadow-neon" type="submit"  disabled={isConnected ? false : true}>{buttonText}</button>
+      <button className="text-white px-6 py-2 cursor-pointer hover:scale-110 rounded bg-gradient-to-b from-red-600 shadow-neon" type="submit"  disabled={isConnected ? false : true}>{buttonText}</button>
     </div>
 
     <Link href='https://liquipedia.net/apexlegends/Apex_Legends_Global_Series/2024/Split_1/Pro_League/North_America/Matches'>
-        <div className="p-2 m-2 hover:bg-violet-600/30 text-white text-2xl rounded-md">Pro League Groups
+        <div className="p-2 m-2 hover:bg-red-600/30 text-white text-2xl rounded-md">Pro League Groups
     </div>
     </Link>
     </div>
@@ -261,10 +262,10 @@ function chooseRandomImageURI() {
       <div className="m-4 flex items-center py-4 flex-col rounded-xl bg-neutral-800 shadow-slate">
         
         <div className="lg:basis-1/5 lg:flex lg: justify-center">
-        <fieldset className="p-2 m-2 w-64 rounded-xl flex flex-col text-white bg-gradient-to-tl from-violet-700 shadow-neon">
+        <fieldset className="p-2 m-2 w-64 rounded-xl flex flex-col text-white bg-gradient-to-tl from-red-600 shadow-neon">
         <legend>2nd Place</legend>
         <label htmlFor="g2First">select team</label>
-        <input required className="text-black p-1 rounded-lg focus:border-redd-700" type="text" name="Game2-1st" id="g2First" list="proTeams" placeholder="pick team" onChange={(event) => setTeam2(event.target.value)}/>
+        <input required className="text-black p-1 rounded-lg focus:border-redd-600" type="text" name="Game2-1st" id="g2First" list="proTeams" placeholder="pick team" onChange={(event) => setTeam2(event.target.value)}/>
         
       
       </fieldset>
@@ -272,10 +273,10 @@ function chooseRandomImageURI() {
     
 
     <div className="lg:basis-1/5 lg:flex lg: justify-center">
-      <fieldset className="p-2 m-2 w-64 rounded-xl flex flex-col text-white bg-gradient-to-tl from-violet-700 shadow-neon">
+      <fieldset className="p-2 m-2 w-64 rounded-xl flex flex-col text-white bg-gradient-to-tl from-red-600 shadow-neon">
         <legend>3rd Place</legend>
         <label htmlFor="g3First">select team</label>
-        <input required className="text-black p-1 rounded-lg focus:border-redd-700" type="text" name="Game3-1st" id="g3First" list="proTeams" placeholder="pick team" onChange={(event) => setTeam3(event.target.value)}/>
+        <input required className="text-black p-1 rounded-lg focus:border-redd-600" type="text" name="Game3-1st" id="g3First" list="proTeams" placeholder="pick team" onChange={(event) => setTeam3(event.target.value)}/>
         
        
       </fieldset>
@@ -284,35 +285,36 @@ function chooseRandomImageURI() {
    
 
       <div className="lg:basis-1/5 lg:flex lg: justify-center">
-      <fieldset className="p-2 m-2 w-64 rounded-xl flex flex-col text-white bg-gradient-to-tl from-violet-700 shadow-neon">
+      <fieldset className="p-2 m-2 w-64 rounded-xl flex flex-col text-white bg-gradient-to-tl from-red-600 shadow-neon">
         <legend>4th Place</legend>
         <label htmlFor="g4First">select team</label>
-        <input required className="text-black p-1 rounded-lg focus:border-redd-700" type="text" name="Game4-1st" id="g4First" list="proTeams" placeholder="pick team" onChange={(event) => setTeam4(event.target.value)} />
+        <input required className="text-black p-1 rounded-lg focus:border-redd-600" type="text" name="Game4-1st" id="g4First" list="proTeams" placeholder="pick team" onChange={(event) => setTeam4(event.target.value)} />
         
       
       </fieldset>
     </div>
 
     <div className="lg:basis-1/5 lg:flex lg: justify-center">
-      <fieldset className="p-2 m-2 w-64 rounded-xl flex flex-col text-white bg-gradient-to-tl from-violet-700 shadow-neon">
+      <fieldset className="p-2 m-2 w-64 rounded-xl flex flex-col text-white bg-gradient-to-tl from-red-600 shadow-neon">
         <legend>5th Place</legend>
         <label htmlFor="g5First">select team</label>
-        <input required className="text-black p-1 rounded-lg focus:border-redd-700" type="text" name="Game5-1st" id="g5First" list="proTeams" placeholder="pick team" onChange={(event) => setTeam5(event.target.value)}/>
+        <input required className="text-black p-1 rounded-lg focus:border-redd-600" type="text" name="Game5-1st" id="g5First" list="proTeams" placeholder="pick team" onChange={(event) => setTeam5(event.target.value)}/>
         
        
       </fieldset>
       </div>
 
       <div className="lg:basis-1/5 lg:flex lg: justify-center">          
-      <fieldset className="p-2 m-2 w-64 rounded-xl flex flex-col text-white bg-gradient-to-tl from-violet-700 shadow-neon">
+      <fieldset className="p-2 m-2 w-64 rounded-xl flex flex-col text-white bg-gradient-to-tl from-red-600 shadow-neon">
         <legend>6th Place</legend>
         <label htmlFor="g6First">select team</label>
-        <input required className="text-black p-1 rounded-lg focus:border-redd-700" type="text" name="Game6-1st" id="g6First" list="proTeams" placeholder="pick team" onChange={(event) => setTeam6(event.target.value)}/>
+        <input required className="text-black p-1 rounded-lg focus:border-redd-600" type="text" name="Game6-1st" id="g6First" list="proTeams" placeholder="pick team" onChange={(event) => setTeam6(event.target.value)}/>
         
        
       </fieldset>
       </div>
       </div>
+      <Footer />
       </div>
 
     <datalist id="proTeams">
