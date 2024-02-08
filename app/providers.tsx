@@ -45,6 +45,7 @@ const Providers = ({ children }: { children: React.ReactNode }) => {
     wallets: [
       particleWallet({ chains, authType: 'twitch' }),
       particleWallet({ chains, authType: 'discord' }),
+      particleWallet({ chains, authType: 'twitter' }),
       particleWallet({ chains, authType: 'google' }),
       particleWallet({ chains }),
       injectedWallet(commonOptions),

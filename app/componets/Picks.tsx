@@ -1,183 +1,211 @@
-"use client"
+"use client";
+
 
 import { useState } from "react";
-import Link from 'next/link'
+import Link from "next/link";
 import { NFTStorage, File } from "nft.storage";
-// import { ethers } from "ethers";
-import { useAccount, useWalletClient } from "wagmi";
-import { getContract, waitForTransaction } from "wagmi/actions";
+import { useAccount, useContractWrite } from "wagmi";
 import { abi } from "../utils/Web3LegendsABI";
 import { parseEther } from "viem";
 
 
-
-
-
 function Picks() {
-
-  const { data: walletClient } = useWalletClient();
-    const [buttonText, setButtonText] = useState('Mint');
-    const { isConnected } = useAccount();
-    
-
-const [tournament, setTournament] = useState({});
-    const [team1, setTeam1] = useState({}); 
-    const [team2, setTeam2] = useState({});
-    const [team3, setTeam3] = useState({});
-    const [team4, setTeam4] = useState({});
-    const [team5, setTeam5] = useState({});
-    const [team6, setTeam6] = useState({});
-    const [score, setScore] = useState({});
-
-    const API_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweDUxQzhiNTQwZDcyYTg0ZmViOWZiOUFiN0FhOTk2NDE0ZDZhYkRBQzMiLCJpc3MiOiJuZnQtc3RvcmFnZSIsImlhdCI6MTY3OTkwOTEwMjE4NCwibmFtZSI6Ik5GVCBrZXkifQ.lLFXxCYxbz75zJKVFB-plz3KsdOSdPHx13ElExD_9eI";
+  const [buttonText, setButtonText] = useState("Mint");
 
 
-function sleep(ms: number | undefined) {
-  return new Promise((resolve) => setTimeout(resolve, ms));
-}
+  const [tournament, setTournament] = useState<String>("");
+  const [team1, setTeam1] = useState<String>("");
+  const [team2, setTeam2] = useState<String>("");
+  const [team3, setTeam3] = useState<String>("");
+  const [team4, setTeam4] = useState<String>("");
+  const [team5, setTeam5] = useState<String>("");
+  const [team6, setTeam6] = useState<String>("");
+  const [score, setScore] = useState<String>("");
 
-const imageURIs = [
-  { uri: ['Apex 1', 'Common Game Pass','https://white-serious-slug-851.mypinata.cloud/ipfs/QmNNyQqyXPm8JrgUD6UbaQvMggxDtZypSZTXx9QU7YyJ15'], occurrence: 20 },
-  { uri: ['Apex 3', 'Common Game Pass','https://white-serious-slug-851.mypinata.cloud/ipfs/QmS3A6ptH8BgbGHWj9diyBd7AqKJuiCTxXJBDeYWXVsiMV'], occurrence: 20 },
-  { uri: ['Apex 2', 'Rare Game Pass','https://white-serious-slug-851.mypinata.cloud/ipfs/QmTFEwYt5ncAp4wAQWRJxNb6HitJZvXRuLMDXPf1RambK4'], occurrence: 15 },
-  { uri: ['Puppet Master', 'Rare Game Pass','https://white-serious-slug-851.mypinata.cloud/ipfs/QmYHaTJUEx8JydjWBwBzedrKVaqWyDoCwTJbAcZ5w9iQag'], occurrence: 15 },
-  { uri: ['Unmerciful', 'Epic Game Pass','https://white-serious-slug-851.mypinata.cloud/ipfs/QmcbvwqYoTYAfcbp3yqtQMyxcTUM8ba4EeYn7MvgfjBNBG'], occurrence: 7.5 },
-  { uri: ['Dinna fash', 'Epic Game Pass','https://white-serious-slug-851.mypinata.cloud/ipfs/QmbYa37wRN7Y3V7yHvyFnK3jDDc1g2zzdbBojjnujiQFdk'], occurrence: 7.5 },
-  { uri: ['Just Business', 'Legendary Game Pass','https://white-serious-slug-851.mypinata.cloud/ipfs/QmNkNVzPgsQEV5LNx9BDEzcmM9DkuyPqWqgDBzQ75GQPkZ'], occurrence: 5 },
-  { uri: ['Get Some', 'Legendary Game Pass','https://white-serious-slug-851.mypinata.cloud/ipfs/QmV4A6ZvMUzqwmAR6GgmhWV4GjFydUhRgnve1biZ8XZ3Yb'], occurrence: 5 },
-  { uri: ['Champions', 'Mythic Game Pass','https://white-serious-slug-851.mypinata.cloud/ipfs/QmVMkpd7eNcb3nba9EDiuYsAthBxrNb2Ze9sB5jaASGKzK'], occurrence: 2.5 },
-  { uri: ['Champions', 'Mythic Game Pass','https://white-serious-slug-851.mypinata.cloud/ipfs/Qmf4x4ZwXtLEJQ8CsvyYekDsKMFn7asdBCq29SnKnMx6SC'], occurrence: 2.5 }
-];
+
+  const { isConnected } = useAccount();
+
+
+  const API_KEY =
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweDUxQzhiNTQwZDcyYTg0ZmViOWZiOUFiN0FhOTk2NDE0ZDZhYkRBQzMiLCJpc3MiOiJuZnQtc3RvcmFnZSIsImlhdCI6MTY3OTkwOTEwMjE4NCwibmFtZSI6Ik5GVCBrZXkifQ.lLFXxCYxbz75zJKVFB-plz3KsdOSdPHx13ElExD_9eI";
+
+
+  function sleep(ms: number | undefined) {
+    return new Promise((resolve) => setTimeout(resolve, ms));
+  }
+
+
+  const imageURIs = [
+    {
+      uri: [
+        "Apex 1",
+        "Common Game Pass",
+        "https://white-serious-slug-851.mypinata.cloud/ipfs/QmNNyQqyXPm8JrgUD6UbaQvMggxDtZypSZTXx9QU7YyJ15",
+      ],
+      occurrence: 20,
+    },
+    {
+      uri: [
+        "Apex 3",
+        "Common Game Pass",
+        "https://white-serious-slug-851.mypinata.cloud/ipfs/QmS3A6ptH8BgbGHWj9diyBd7AqKJuiCTxXJBDeYWXVsiMV",
+      ],
+      occurrence: 20,
+    },
+    {
+      uri: [
+        "Apex 2",
+        "Rare Game Pass",
+        "https://white-serious-slug-851.mypinata.cloud/ipfs/QmTFEwYt5ncAp4wAQWRJxNb6HitJZvXRuLMDXPf1RambK4",
+      ],
+      occurrence: 15,
+    },
+    {
+      uri: [
+        "Puppet Master",
+        "Rare Game Pass",
+        "https://white-serious-slug-851.mypinata.cloud/ipfs/QmYHaTJUEx8JydjWBwBzedrKVaqWyDoCwTJbAcZ5w9iQag",
+      ],
+      occurrence: 15,
+    },
+    {
+      uri: [
+        "Unmerciful",
+        "Epic Game Pass",
+        "https://white-serious-slug-851.mypinata.cloud/ipfs/QmcbvwqYoTYAfcbp3yqtQMyxcTUM8ba4EeYn7MvgfjBNBG",
+      ],
+      occurrence: 7.5,
+    },
+    {
+      uri: [
+        "Dinna fash",
+        "Epic Game Pass",
+        "https://white-serious-slug-851.mypinata.cloud/ipfs/QmbYa37wRN7Y3V7yHvyFnK3jDDc1g2zzdbBojjnujiQFdk",
+      ],
+      occurrence: 7.5,
+    },
+    {
+      uri: [
+        "Just Business",
+        "Legendary Game Pass",
+        "https://white-serious-slug-851.mypinata.cloud/ipfs/QmNkNVzPgsQEV5LNx9BDEzcmM9DkuyPqWqgDBzQ75GQPkZ",
+      ],
+      occurrence: 5,
+    },
+    {
+      uri: [
+        "Get Some",
+        "Legendary Game Pass",
+        "https://white-serious-slug-851.mypinata.cloud/ipfs/QmV4A6ZvMUzqwmAR6GgmhWV4GjFydUhRgnve1biZ8XZ3Yb",
+      ],
+      occurrence: 5,
+    },
+    {
+      uri: [
+        "Champions",
+        "Mythic Game Pass",
+        "https://white-serious-slug-851.mypinata.cloud/ipfs/QmVMkpd7eNcb3nba9EDiuYsAthBxrNb2Ze9sB5jaASGKzK",
+      ],
+      occurrence: 2.5,
+    },
+    {
+      uri: [
+        "Champions",
+        "Mythic Game Pass",
+        "https://white-serious-slug-851.mypinata.cloud/ipfs/Qmf4x4ZwXtLEJQ8CsvyYekDsKMFn7asdBCq29SnKnMx6SC",
+      ],
+      occurrence: 2.5,
+    },
+  ];
+
+
+  const TOTAL_PERCENTAGE = 100;
+
 
 function chooseRandomImageURI() {
-  const randomValue = Math.random() * 100;
+  const randomValue = Math.random() * TOTAL_PERCENTAGE;
   let cumulativePercentage = 0;
+
 
   for (const { uri, occurrence } of imageURIs) {
     cumulativePercentage += occurrence;
+
 
     if (randomValue <= cumulativePercentage) {
       return uri;
     }
   }
 
+
   // If no image URI was chosen, return the last one
   return imageURIs[imageURIs.length - 1].uri;
 }
-const mintNFT = async (event: React.FormEvent<HTMLFormElement>): Promise<void> => {
-  event.preventDefault();
-  try {
-    console.log(isConnected);
+
+
+
+  const contractAddr = "0x829CfD6654aaEA5464E3765E10BaA4A8ad33c5AF";
+  const client = new NFTStorage({ token: API_KEY });
+  const imageUrl = chooseRandomImageURI();
+  // console.log(imageUrl);
+
+
+  const { write } = useContractWrite({
+    address: contractAddr,
+    abi: abi,
+    functionName: "mintNFT",
+    args: [2],
+    value: parseEther("0.1"),
+  });
+
+
+  const mintNFT = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    try {
+      console.log(isConnected);
       if (isConnected) {
-      try {
-        
-        // const provider = new ethers.providers.Web3Provider((window as any).ethereum);
-        // const signer = provider.getSigner();
-        const contractAddr = "0x829CfD6654aaEA5464E3765E10BaA4A8ad33c5AF";
-        // const Contract = new ethers.Contract(contractAddr, abi, signer);
-        // console.log(Contract);
-        const client = new NFTStorage({ token: API_KEY });
-    const  imageUrl = chooseRandomImageURI();
-    console.log(imageUrl);
-    const response = await fetch(imageUrl[2]);
-    const blob = await response.blob();
-    setButtonText('Uploading your Picks...');
-    const metadata = await client.store({
-     name: imageUrl[0],
-     description: imageUrl[1],
-     image: new File([blob], "picks.png", { type: "image/png" }),// uri[2]
-     attributes: {
-      "Team1": `${team1},${score}`,
-      "Team2": `${team2}`,
-      "Team3": `${team3}`,
-      "Team4": `${team4}`,
-      "Team5": `${team5}`,
-      "Team6": `${team6}`,
-      "Tournament": `${tournament}`,
+        try {
+          setButtonText("Uploading your Picks...");
+          const response = await fetch(imageUrl[2]);
+          const _blob = await response.blob();
+          const metadata = await client.store({
+            name: imageUrl[0],
+            description: imageUrl[1],
+            image: new File([_blob!], "picks.png", { type: "image/png" }), // uri[2]
+            attributes: {
+              Team1: `${team1},${score}`,
+              Team2: `${team2}`,
+              Team3: `${team3}`,
+              Team4: `${team4}`,
+              Team5: `${team5}`,
+              Team6: `${team6}`,
+              Tournament: `${tournament}`,
+            },
+          });
+
+
+          console.log("mint button clicked :", metadata);
+          await write?.({
+            args: [metadata?.url],
+          });
+          // setButtonText("Minting NFT...");
+          setButtonText("NFT Minted...");
+          // console.log("NFT Minted");
+          await sleep(5000);
+          setButtonText("Mint");
+          const myForm = document.getElementById("myForm") as HTMLFormElement;
+          myForm.reset();
+        } catch (err) {
+          console.log(err);
+          setButtonText("Mint");
+        }
+      } else {
+        window.alert("Please connect Wallet");
       }
-    });
-    console.log("Metadata stored on IPFS with URL:", metadata.url);
-    setButtonText('Minting NFT...');
-    
-    const contract = getContract({
-      address: contractAddr,
-      abi: abi,
-      walletClient: walletClient!,
-    });
-    console.log(abi);
-
-
-    const mintTx = await contract.write.mintNFT([
-      metadata.url,
-      { value: parseEther(".1") },
-    ]);
-    console.log(mintTx);
-
-
-    const confirmed = await waitForTransaction({ hash: mintTx });
-
-
-    console.log("Confirmed:", confirmed);
-
-    // const mintTx = await Contract.mintNFT(metadata.url, {"value": ethers.utils.parseEther("3")});
-    
-    setButtonText('NFT Minted...');
-    // console.log("NFT Minted");
-    await sleep(5000);
-    setButtonText('Mint');
-
-    const myForm = document.getElementById('myForm') as HTMLFormElement;
-    myForm.reset();
-
-  } catch (err) {
-    console.log(err);
-    setButtonText('Mint');
-  }
-  
-
-} else {
-  window.alert("Please connect Wallet");
-}
-
-
-} catch (error) {
-console.error(error);
-setButtonText('Mint');
-}
-
-
-}
-const mintNFTS = async () => {
-  const imageURIs = [
-    { uri: 'URI_FOR_IMAGE_1', occurrence: 20 },
-    { uri: 'URI_FOR_IMAGE_2', occurrence: 20 },
-    { uri: 'URI_FOR_IMAGE_3', occurrence: 15 },
-    { uri: 'URI_FOR_IMAGE_4', occurrence: 15 },
-    { uri: 'URI_FOR_IMAGE_5', occurrence: 7.5 },
-    { uri: 'URI_FOR_IMAGE_6', occurrence: 7.5 },
-    { uri: 'URI_FOR_IMAGE_7', occurrence: 5 },
-    { uri: 'URI_FOR_IMAGE_8', occurrence: 5 },
-    { uri: 'URI_FOR_IMAGE_9', occurrence: 2.5 },
-    { uri: 'URI_FOR_IMAGE_10', occurrence: 2.5 }
-  ];
-
-  function chooseRandomImageURI() {
-    const randomValue = Math.random() * 100;
-    let cumulativePercentage = 0;
-  
-    for (const { uri, occurrence } of imageURIs) {
-      cumulativePercentage += occurrence;
-  
-      if (randomValue <= cumulativePercentage) {
-        return uri;
-      }
-    } 
-     // If no image URI was chosen, return the last one
-     return imageURIs[imageURIs.length - 1].uri;
+    } catch (error) {
+      console.error(error);
+      setButtonText("Mint");
     }
-
-  }
-
+  };
 
   return (
     <div className="mt-12 md:flex md:justify-center">
