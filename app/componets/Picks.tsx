@@ -144,7 +144,7 @@ function chooseRandomImageURI() {
 
 
 
-  const contractAddr = "0x829CfD6654aaEA5464E3765E10BaA4A8ad33c5AF";
+  const contractAddr = "0x3e887dafc8a4535cf5fc472e68a32ea8582550eb";
   const client = new NFTStorage({ token: API_KEY });
   const imageUrl = chooseRandomImageURI();
   // console.log(imageUrl);
