@@ -176,9 +176,9 @@ function Picks() {
             },
           });
           // console.log("mint button clicked :", metadata);
-          // await write?.({
-          //   args: [metadata?.url],
-          // });
+          await write?.({
+            args: [metadata?.url],
+          });
           // setButtonText("Minting NFT...");
           setButtonText("NFT Minted...");
           // console.log("NFT Minted");
