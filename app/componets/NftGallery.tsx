@@ -2,12 +2,12 @@
 
 import axios from "axios";
 import { useEffect, useState } from "react";
-import NftCard from "./NftCard";
-import ApiServices from "../lib/ApiServices";
 import { NftTokenContractBalanceItem } from "@covalenthq/client-sdk";
 import { spanish } from "viem/accounts";
 import { useAccount } from "wagmi";
 import { toast } from "react-toastify";
+import ApiServices from "../lib/ApiServices";
+import NftCard from "./NftCard";
 
 interface nft {
   id: string;
@@ -22,7 +22,7 @@ const NFTGallery = () => {
 
   const { address } = useAccount();
 
-  console.log("address: ", address);
+  // console.log("address: ", address);
 
   useEffect(() => {
     const fetchNFTs = async () => {
@@ -41,7 +41,7 @@ const NFTGallery = () => {
         // );
         if (!address) return toast.error("The address is empty.");
         const response = await ApiServices(address);
-        const nftItems = response.items;
+        const nftItems = response?.items;
         // const data = await response.json();
         console.log(nftItems);
         setLoading(false);
