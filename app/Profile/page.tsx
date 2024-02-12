@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import Header from "../componets/Header";
 import NFTGallery from "../componets/NftGallery";
 import { useAccount } from "wagmi";
@@ -9,7 +9,8 @@ import Image from "next/image";
 import no_data_img from "@/public/assets/icons/nodata.png";
 
 function page() {
-  const { isConnected } = useAccount();
+  // const { isConnected } = useAccount();
+  const [isConnected, setIsConnected] = useState(false);
   return (
     <>
       <Header />
