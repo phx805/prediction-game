@@ -1,6 +1,5 @@
 "use client";
 
-import axios from "axios";
 import { useEffect, useState } from "react";
 import { NftTokenContractBalanceItem } from "@covalenthq/client-sdk";
 import { spanish } from "viem/accounts";

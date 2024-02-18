@@ -10,7 +10,7 @@ import Footer from "./Footer";
 import { toast } from "react-toastify";
 
 function Picks() {
-  const [buttonText, setButtonText] = useState("Mint");
+  const [buttonText, setButtonText] = useState("SuMint");
 
   const [tournament, setTournament] = useState<String>("");
   const [team1, setTeam1] = useState<String>("");
@@ -23,8 +23,8 @@ function Picks() {
 
   const { isConnected } = useAccount();
 
-  const API_KEY =
-    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweDUxQzhiNTQwZDcyYTg0ZmViOWZiOUFiN0FhOTk2NDE0ZDZhYkRBQzMiLCJpc3MiOiJuZnQtc3RvcmFnZSIsImlhdCI6MTY3OTkwOTEwMjE4NCwibmFtZSI6Ik5GVCBrZXkifQ.lLFXxCYxbz75zJKVFB-plz3KsdOSdPHx13ElExD_9eI";
+  // const API_KEY =
+  //   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweDg5NTM3ODM5OGMxMDQxMjFlM2MyNDdkMTkxREU0OGRlNzc0ZTBDMDQiLCJpc3MiOiJuZnQtc3RvcmFnZSIsImlhdCI6MTY4ODUwNDkxNDU5NCwibmFtZSI6IkFwZXgifQ.UYBm8hj2ITLiznEz5ApQMKah_KQhyuPOAZB53sxw4rI";
 
   function sleep(ms: number | undefined) {
     return new Promise((resolve) => setTimeout(resolve, ms));
@@ -132,7 +132,7 @@ function Picks() {
   }
 
   const contractAddr = "0x3e887dafc8a4535cf5fc472e68a32ea8582550eb";
-  const client = new NFTStorage({ token: API_KEY });
+  const client = new NFTStorage({ token: process.env.NEXT_PUBLIC_API_KEY as string });
   const imageUrl = chooseRandomImageURI();
   // console.log(imageUrl);
 
@@ -183,19 +183,19 @@ function Picks() {
           setButtonText("NFT Minted...");
           // console.log("NFT Minted");
           await sleep(5000);
-          setButtonText("Mint");
+          setButtonText("SuMint");
           // const myForm = document.getElementById("myForm") as HTMLFormElement;
           // myForm.reset();
         } catch (err) {
           console.log(err);
-          setButtonText("Mint");
+          setButtonText("SuMint");
         }
       } else {
         return toast.error("Please connect Wallet");
       }
     } catch (error) {
       console.error(error);
-      setButtonText("Mint");
+      setButtonText("SuMint");
     }
   };
 
@@ -221,8 +221,9 @@ function Picks() {
                     <option value="DEFAULT" disabled>
                       Select Tournament
                     </option>
-                    <option>Split 1: Feb 4th, AvsB</option>
                     <option>Split 1: Feb 10th, AvsC</option>
+                    <option>Split 1: Mar 2nd, BvsC</option>
+                    <option>Split 1: Mar 3rd, AvsB</option>
                   </select>
                 </fieldset>
               </div>
