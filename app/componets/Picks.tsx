@@ -132,7 +132,9 @@ function Picks() {
   }
 
   const contractAddr = "0x3e887dafc8a4535cf5fc472e68a32ea8582550eb";
-  const client = new NFTStorage({ token: process.env.NEXT_PUBLIC_API_KEY as string });
+  const client = new NFTStorage({
+    token: process.env.NEXT_PUBLIC_API_KEY as string,
+  });
   const imageUrl = chooseRandomImageURI();
   // console.log(imageUrl);
 
@@ -272,7 +274,7 @@ function Picks() {
             </div>
 
             <Link href="https://liquipedia.net/apexlegends/Apex_Legends_Global_Series/2024/Split_1/Pro_League/North_America/Matches">
-              <div className="p-2 m-2 hover:bg-red-600/30 text-white text-2xl rounded-md">
+              <div className="p-2 m-2 hover:bg-[#121c31] text-white text-2xl rounded-md">
                 Pro League Groups
               </div>
             </Link>
