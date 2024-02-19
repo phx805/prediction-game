@@ -5,7 +5,7 @@ Key features of our application include:
 
 1. **Prediction Submission**: Viewers can easily submit their predictions for the top six placements in the tournament through our user-friendly interface. Upon submission, users receive a unique NFT game pass, which serves as a digital token representing their entry into the prediction game.
 
-2. **NFT Game Passes**: Each prediction is minted as an NFT game pass, with the user's predictions securely stored in the metadata of the token. This ensures transparency and immutability, allowing users to verify their predictions on the blockchain.
+2. **NFT Game Passes**: Each prediction is minted as an NFT game pass, with the user's predictions securely stored in the metadata of the token. This ensures transparency and immutability, allowing users to verify their predictions on the blockchain. To enhance the visual appeal of our platform, we collaborated with the Apex community's fanart creators to design captivating NFT artwork, adding an extra layer of excitement to the game experience.
 
 3. **Blockchain Integration**: Leveraging the Avalanche Testnet blockchain, our platform provides a secure and scalable environment for managing prediction submissions and recording results. Blockchain technology ensures transparency, fairness, and tamper-proof record-keeping throughout the prediction game.
 
