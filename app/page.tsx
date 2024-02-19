@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       <Header />
-      <div className="md:grid md:grid-flow-col w-full h-full">
+      <div className="lg:grid lg:grid-flow-col w-full h-full px-4 pb-8">
         <Landing />
         <Picks />
       </div>

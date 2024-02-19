@@ -131,8 +131,15 @@ function Picks() {
     return imageURIs[imageURIs.length - 1].uri;
   }
 
+<<<<<<< HEAD
   const contractAddr = "0xB8B88636c85F9A00145a220D7449b129edb75495";
   const client = new NFTStorage({ token: process.env.NEXT_PUBLIC_API_KEY as string });
+=======
+  const contractAddr = "0x3e887dafc8a4535cf5fc472e68a32ea8582550eb";
+  const client = new NFTStorage({
+    token: process.env.NEXT_PUBLIC_API_KEY as string,
+  });
+>>>>>>> 3c375fc83b2ad4a52c8bda6eaa262b1ae56544d6
   const imageUrl = chooseRandomImageURI();
   // console.log(imageUrl);
 
@@ -272,7 +279,7 @@ function Picks() {
             </div>
 
             <Link href="https://liquipedia.net/apexlegends/Apex_Legends_Global_Series/2024/Split_1/Pro_League/North_America/Matches">
-              <div className="p-2 m-2 hover:bg-red-600/30 text-white text-2xl rounded-md">
+              <div className="p-2 m-2 hover:bg-[#121c31] text-white text-2xl rounded-md">
                 Pro League Groups
               </div>
             </Link>
