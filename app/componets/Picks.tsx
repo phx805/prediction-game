@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { NFTStorage, File } from "nft.storage";
 import { useAccount, useContractWrite } from "wagmi";
-import { abi } from "../utils/Web3LegendsABI";
+import { abi } from "../utils/ProPredictionsABI";
 import { parseEther } from "viem";
 import Footer from "./Footer";
 import { toast } from "react-toastify";
@@ -131,7 +131,7 @@ function Picks() {
     return imageURIs[imageURIs.length - 1].uri;
   }
 
-  const contractAddr = "0x3e887dafc8a4535cf5fc472e68a32ea8582550eb";
+  const contractAddr = "0xB8B88636c85F9A00145a220D7449b129edb75495";
   const client = new NFTStorage({ token: process.env.NEXT_PUBLIC_API_KEY as string });
   const imageUrl = chooseRandomImageURI();
   // console.log(imageUrl);
@@ -141,7 +141,7 @@ function Picks() {
     abi: abi,
     functionName: "mintNFT",
     args: [2],
-    value: parseEther("0.1"),
+    value: parseEther("0.01"),
   });
 
   const mintNFT = async (event: React.FormEvent<HTMLFormElement>) => {
