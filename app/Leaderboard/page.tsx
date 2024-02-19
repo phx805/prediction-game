@@ -19,6 +19,11 @@ function page() {
           mode="dark"
           color="emerald"
         >
+           <NFTCollectionTokenListView
+            chain_name={"avalanche-testnet"} //sample chain
+            collection_address={"0xB8B88636c85F9A00145a220D7449b129edb75495"}
+            name={"name"}
+          />
           <NFTCollectionTokenListView
             chain_name={"avalanche-testnet"} //sample chain
             collection_address={"0x3E887DafC8A4535CF5Fc472e68A32Ea8582550EB"}
