@@ -2,7 +2,7 @@
 
 
 import React, { useMemo } from 'react';
-import { connectorsForWallets, RainbowKitProvider } from '@rainbow-me/rainbowkit';
+import { connectorsForWallets, RainbowKitProvider, darkTheme } from '@rainbow-me/rainbowkit';
 import { argentWallet, coinbaseWallet, imTokenWallet, injectedWallet, ledgerWallet, metaMaskWallet, omniWallet, rainbowWallet, trustWallet, walletConnectWallet } from '@rainbow-me/rainbowkit/wallets';
 
 
@@ -85,7 +85,9 @@ const Providers = ({ children }: { children: React.ReactNode }) => {
 
   return (
     <WagmiConfig config={wagmiClient}>
-      <RainbowKitProvider chains={chains}>
+      <RainbowKitProvider chains={chains}  theme={darkTheme({
+        ...darkTheme.accentColors.red,
+      })}>
         {mounted && children}
       </RainbowKitProvider>
     </WagmiConfig>

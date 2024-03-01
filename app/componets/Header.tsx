@@ -18,7 +18,7 @@ function Header() {
         <Image src="/avalanche-avax-logo.svg" width={56} height={56} alt="" />
 
         <Link href="/" className="text-white text-2xl">
-          Pro Predictons
+          Pro Predictions
         </Link>
       </div>
       <div
@@ -36,7 +36,7 @@ function Header() {
         <Link href="/Tools" className="text-white">
           Tools
         </Link>
-        <ConnectButton />
+        <ConnectButton label="Connect" />
       </div>
       <div
         className="mr-4 hidden max-[800px]:block hover:opacity-80 hover:cursor-pointer"
