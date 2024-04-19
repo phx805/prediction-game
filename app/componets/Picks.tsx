@@ -223,9 +223,9 @@ function Picks() {
                     <option value="DEFAULT" disabled>
                       Select Tournament
                     </option>
-                    <option>Split 1: Feb 10th, AvsC</option>
-                    <option>Split 1: Mar 2nd, BvsC</option>
-                    <option>Split 1: Mar 3rd, AvsB</option>
+                    <option>Split 1: May 2, CvsD</option>
+                    <option>Split 1: May 2, AvsB</option>
+                    <option>Split 1: May 2, AvsD</option>
                   </select>
                 </fieldset>
               </div>
@@ -372,38 +372,49 @@ function Picks() {
 
           <datalist id="proTeams">
             {/* Group A */}
-            <option value="TSM"></option>
-            <option value="Luminosity"></option>
-            <option value="Oxygen"></option>
-            <option value="Dudes Night Out"></option>
-            <option value="Skrt"></option>
-            <option value="Flat"></option>
-            <option value="Native Gaming"></option>
-            <option value="GKS"></option>
-            <option value="Oblivion"></option>
-            <option value="Drop-In Gaming"></option>
-            {/* Group B */}
-            <option value="OpTic Gaming"></option>
-            <option value="Eternal EC"></option>
             <option value="DarkZero"></option>
-            <option value="Complexity"></option>
-            <option value="Faze"></option>
-            <option value="KREAM"></option>
-            <option value="Ape Gang"></option>
-            <option value="Elev8 Gaming"></option>
-            <option value="Tempr"></option>
-            <option value="PLP"></option>
-            {/* Group C */}
+            <option value="NAVI"></option>
+            <option value="KINOTROPE"></option>
+            <option value="MDY White"></option>
+            <option value="VirtusPro"></option>
+            <option value="Crazy Raccoon"></option>
+            <option value="2R1C"></option>
+            <option value="Luminosity"></option>
+            <option value="Oxygen Esports"></option>
+            <option value="Never To Change"></option>
+            {/* Group B */}
+            <option value="Aurora Gaming"></option>
+            <option value="REJECT WINNITY"></option>
+            <option value="Tom Yum Kung"></option>
+            <option value="Liquid"></option>
             <option value="Disguised"></option>
-            <option value="Oversleepers"></option>
-            <option value="Sentinels"></option>
-            <option value="XSET"></option>
+            <option value="Serenity"></option>
+            <option value="OMiT"></option>
+            <option value="Red Rams"></option>
+            <option value="Cloud9"></option>
+            <option value="Geared Gaming"></option>
+            {/* Group C */}
+            <option value="Fnatic"></option>
+            <option value="Legends Gaming"></option>
+            <option value="TSM"></option>
+            <option value="Made in Heaven"></option>
+            <option value="o7"></option>
+            <option value="Elev8 Gaming"></option>
+            <option value="Boogie Boarders"></option>
+            <option value="NORTHEPTION"></option>
             <option value="FURIA"></option>
-            <option value="Legacy"></option>
-            <option value="Moist"></option>
-            <option value="Meat Lovers"></option>
-            <option value="N9ne Lies"></option>
-            <option value="EVYLUTION"></option>
+            <option value="WMNDY"></option>
+            {/* Group D */}
+            <option value="Wonton Dumpling"></option>
+            <option value="Not Moist"></option>
+            <option value="Alliance"></option>
+            <option value="RIDDLE"></option>
+            <option value="HAO"></option>
+            <option value="Passion UA"></option>
+            <option value="SpaceStation"></option>
+            <option value="Heroez"></option>
+            <option value="Complexity"></option>
+            <option value="BR Demonz"></option>
           </datalist>
         </div>
       </div>
