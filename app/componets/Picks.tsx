@@ -168,7 +168,8 @@ function Picks() {
             description: imageUrl[1],
             image: new File([_blob!], "picks.png", { type: "image/png" }), // uri[2]
             attributes: {
-              Team1: `${team1},${score}`,
+              Team1: `${team1}`,
+              Score: `${score}`,
               Team2: `${team2}`,
               Team3: `${team3}`,
               Team4: `${team4}`,
@@ -224,8 +225,8 @@ function Picks() {
                       Select Tournament
                     </option>
                     <option>Split 1: May 2, CvsD</option>
-                    <option>Split 1: May 2, AvsB</option>
-                    <option>Split 1: May 2, AvsD</option>
+                    {/* <option>Split 1: May 2, AvsB</option>
+                    <option>Split 1: May 2, AvsD</option> */}
                   </select>
                 </fieldset>
               </div>
@@ -372,7 +373,7 @@ function Picks() {
 
           <datalist id="proTeams">
             {/* Group A */}
-            <option value="DarkZero"></option>
+            {/* <option value="DarkZero"></option>
             <option value="NAVI"></option>
             <option value="KINOTROPE"></option>
             <option value="MDY White"></option>
@@ -381,9 +382,9 @@ function Picks() {
             <option value="2R1C"></option>
             <option value="Luminosity"></option>
             <option value="Oxygen Esports"></option>
-            <option value="Never To Change"></option>
+            <option value="Never To Change"></option> */}
             {/* Group B */}
-            <option value="Aurora Gaming"></option>
+            {/* <option value="Aurora Gaming"></option>
             <option value="REJECT WINNITY"></option>
             <option value="Tom Yum Kung"></option>
             <option value="Liquid"></option>
@@ -392,7 +393,7 @@ function Picks() {
             <option value="OMiT"></option>
             <option value="Red Rams"></option>
             <option value="Cloud9"></option>
-            <option value="Geared Gaming"></option>
+            <option value="Geared Gaming"></option> */}
             {/* Group C */}
             <option value="Fnatic"></option>
             <option value="Legends Gaming"></option>
