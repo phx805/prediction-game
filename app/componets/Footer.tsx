@@ -6,7 +6,7 @@ import { IoLogoYoutube } from "react-icons/io5";
 
 function Footer() {
   return (
-    <div className="mt-8">
+    <div className="w-full flex justify-between items-center fixed bottom-[36px] left-0 px-14 max-[512px]:flex max-[512px]:flex-col max-[512px]:gap-2 max-[512px]:bottom-[16px]">
       <div className="gap-8 flex flex-row-reverse">
         <Link href="https://www.youtube.com/channel/UCRago64jVGUXqOZV4sIZhHA">
           <div className="hover:opacity-60 p-2 w-fit bg-red-600 rounded-md">
@@ -32,6 +32,7 @@ function Footer() {
           </div>
         </Link>
       </div>
+      <span className="text-white text-[14px]">@ 2024 ProPredictions</span>
     </div>
   );
 }

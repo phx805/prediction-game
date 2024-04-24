@@ -13,7 +13,7 @@ function Header() {
   };
 
   return (
-    <div className="flex justify-between items-center bg-black p-4 ">
+    <div className="flex justify-between items-center p-4 fixed top-0 left-0 w-full">
       <div className="ml-4 gap-4 flex items-center">
         <Image src="/avalanche-avax-logo.svg" width={56} height={56} alt="" />
 
@@ -22,9 +22,7 @@ function Header() {
         </Link>
       </div>
       <div
-        className={`mr-4 gap-6 max-sm:flex-col-reverse flex items-center max-[800px]:${
-          visibleMenu ? "flex" : "hidden"
-        } max-[800px]:flex-col max-[800px]:fixed max-[800px]:top-[90px] max-[800px]:right-0 max-[800px]:bg-black max-[800px]:rounded-[10px] max-[800px]:p-4`}
+        className={`mr-4 gap-6 max-sm:flex-col-reverse flex items-center max-[800px]:hidden`}
       >
         <h3 className="max-md:hidden p-1 bg-red-500 rounded-xl">Beta</h3>
         <Link href="/Leaderboard" className="text-white">
@@ -38,6 +36,23 @@ function Header() {
         </Link>
         <ConnectButton label="Connect" />
       </div>
+      {visibleMenu && (
+        <div
+          className={`hidden mr-4 gap-6 max-sm:flex-col-reverse items-center max-[800px]:flex max-[800px]:flex-col max-[800px]:fixed max-[800px]:top-[90px] max-[800px]:right-0 max-[800px]:bg-black max-[800px]:rounded-[10px] max-[800px]:p-4`}
+        >
+          <h3 className="p-1 bg-red-500 rounded-xl max-[800px]:hidden">Beta</h3>
+          <Link href="/Leaderboard" className="text-white">
+            Leaderboard
+          </Link>
+          <Link href="/Profile" className="text-white">
+            Profile
+          </Link>
+          <Link href="/Tools" className="text-white">
+            Tools
+          </Link>
+          <ConnectButton label="Connect" />
+        </div>
+      )}
       <div
         className="mr-4 hidden max-[800px]:block hover:opacity-80 hover:cursor-pointer"
         onClick={onViewMenu}

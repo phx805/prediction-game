@@ -13,13 +13,13 @@ function page() {
   return (
     <>
       <Header />
-      <div className="text-white m-8 leaderboard pb-12 sm:m-16">
+      <div className="h-screen overflow-y-auto flex flex-col justify-start items-start text-white m-8 leaderboard pb-12 sm:m-16">
         <GoldRushProvider
           apikey={"cqt_rQDhFWh8qxVbFxX6tmJb3gVWRK8d"}
           mode="dark"
           color="emerald"
         >
-           <NFTCollectionTokenListView
+          <NFTCollectionTokenListView
             chain_name={"avalanche-testnet"} //sample chain
             collection_address={"0xB8B88636c85F9A00145a220D7449b129edb75495"}
             name={"name"}

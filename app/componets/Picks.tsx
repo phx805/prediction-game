@@ -8,6 +8,10 @@ import { abi } from "../utils/ProPredictionsABI";
 import { parseEther } from "viem";
 import Footer from "./Footer";
 import { toast } from "react-toastify";
+import Image from "next/image";
+
+import researchTeamImg from "@/public/assets/imgs/researchTeam.png";
+import eliteClubImg from "@/public/assets/imgs/eliteClub.png";
 
 function Picks() {
   const [buttonText, setButtonText] = useState("SuMint");
@@ -203,15 +207,30 @@ function Picks() {
   };
 
   return (
-    <div className="mt-12 md:flex md:justify-center">
-      <div id="myForm">
-        <div className="md:flex md:justify-end">
+    <div className="flex justify-center items-center h-full">
+      <div className="flex flex-col justify-center items-center gap-2 -translate-y-[160px] max-[1600px]:translate-x-[48px] max-[1520px]:translate-x-[86px] max-[1400px]:translate-x-[120px] max-[1386px]:hidden">
+        <span className="text-white text-[20px]">Research Teams</span>
+        <Image
+          alt="research teams"
+          src={researchTeamImg.src}
+          width={researchTeamImg.width}
+          height={researchTeamImg.height}
+        />
+      </div>
+
+      <div
+        id="myForm"
+        className="max-[1078px]:h-full max-[1078px]:py-[124px] max-[1078px]:overflow-y-auto max-[580px]:w-full max-[580px]:px-4"
+      >
+        <div className="flex justify-start flex-col gap-4 max-[1078px]:py-4 max-[1078px]:px-4 max-[580px]:w-full">
           <div className="flex flex-col items-center">
-            <div className="m-4 max-w-xs max-h-80 flex items-center py-4 flex-col rounded-xl bg-neutral-800 shadow-slate">
-              <h1 className="text-white text-xl font-medium">NA</h1>
+            <div className="max-w-xs max-h-80 flex gap-4 items-center flex-col rounded-xl">
+              <h1 className="text-white text-2xl font-medium">
+                Make Your Predictions
+              </h1>
               <div className="flex justify-center">
                 <fieldset className="p-2 mx-2 w-64 rounded-xl flex flex-col text-white bg-gradient-to-tl from-red-600 shadow-neon">
-                  <legend className="text-center text-xl font-medium">
+                  <legend className="text-center text-xl font-medium max-[1078px]:w-[508px] max-[580px]:w-full">
                     Tournament
                   </legend>
                   <select
@@ -231,144 +250,147 @@ function Picks() {
                 </fieldset>
               </div>
 
-              <h2 className="mt-2 text-center text-white">
-                Make your Predictions
-              </h2>
-
-              <fieldset className="p-2 w-64 rounded-xl flex flex-col text-white bg-gradient-to-tl from-red-600 shadow-neon">
+              <fieldset className="p-2 w-64 rounded-xl flex gap-4 text-white bg-gradient-to-tl from-red-600 shadow-neon max-[580px]:flex-col">
                 <legend>1st Place</legend>
-                <label htmlFor="g1First">select team</label>
-                <input
-                  required
-                  className="text-black p-1 rounded-lg focus:border-redd-600"
-                  type="text"
-                  name="Game1-1st"
-                  id="g1First"
-                  list="proTeams"
-                  placeholder="pick team"
-                  onChange={(event) => setTeam1(event.target.value)}
-                />
+                <div className="flex flex-col justify-start items-start">
+                  <label htmlFor="g1First">select team</label>
+                  <input
+                    required
+                    className="text-black p-1 rounded-lg focus:border-redd-600"
+                    type="text"
+                    name="Game1-1st"
+                    id="g1First"
+                    list="proTeams"
+                    placeholder="pick team"
+                    onChange={(event) => setTeam1(event.target.value)}
+                  />
+                </div>
 
-                <label htmlFor="g1Second">Total Points</label>
-                <input
-                  required
-                  className="text-black p-1 rounded-lg focus:border-redd-600"
-                  type="number"
-                  name="Game1-2nd"
-                  id="g1Second"
-                  placeholder="Score"
-                  onChange={(event) => setScore(event.target.value)}
-                />
+                <div className="flex flex-col justify-start items-start">
+                  <label htmlFor="g1Second">Total Points</label>
+                  <input
+                    required
+                    className="text-black p-1 rounded-lg focus:border-redd-600"
+                    type="number"
+                    name="Game1-2nd"
+                    id="g1Second"
+                    placeholder="Score"
+                    onChange={(event) => setScore(event.target.value)}
+                  />
+                </div>
               </fieldset>
             </div>
 
-            <h2 className="mt-2 text-center text-white">Avax</h2>
-
-            <div className="">
-              <button
-                className="text-white px-6 py-2 cursor-pointer hover:scale-110 rounded bg-gradient-to-b from-red-600 shadow-neon"
-                onClick={(event: any) => mintNFT(event)}
-                // disabled={isConnected ? false : true}
-              >
-                {buttonText}
-              </button>
-            </div>
-
-            <Link href="https://liquipedia.net/apexlegends/Apex_Legends_Global_Series/2024/Split_1/Pro_League/North_America/Matches">
+            {/* <Link href="https://liquipedia.net/apexlegends/Apex_Legends_Global_Series/2024/Split_1/Pro_League/North_America/Matches">
               <div className="p-2 m-2 hover:bg-[#121c31] text-white text-2xl rounded-md">
                 Pro League Groups
               </div>
-            </Link>
+            </Link> */}
           </div>
 
           <div className="flex flex-col items-center">
-            <div className="m-4 flex items-center py-4 flex-col rounded-xl bg-neutral-800 shadow-slate">
-              <div className="lg:basis-1/5 lg:flex lg: justify-center">
-                <fieldset className="p-2 m-2 w-64 rounded-xl flex flex-col text-white bg-gradient-to-tl from-red-600 shadow-neon">
-                  <legend>2nd Place</legend>
-                  <label htmlFor="g2First">select team</label>
-                  <input
-                    required
-                    className="text-black p-1 rounded-lg focus:border-redd-600"
-                    type="text"
-                    name="Game2-1st"
-                    id="g2First"
-                    list="proTeams"
-                    placeholder="pick team"
-                    onChange={(event) => setTeam2(event.target.value)}
-                  />
-                </fieldset>
+            <div className="flex items-center flex-col rounded-xl max-[580px]:gap-4">
+              <div className="flex gap-4 max-[1078px]:flex-col">
+                <div className="lg:basis-1/5 lg:flex lg: justify-center">
+                  <fieldset className="p-2 m-2 w-[360px] rounded-xl flex flex-col text-white bg-gradient-to-tl from-red-600 shadow-neon max-[1078px]:w-[508px] max-[580px]:w-64">
+                    <legend>2nd Place</legend>
+                    <label htmlFor="g2First">select team</label>
+                    <input
+                      required
+                      className="text-black p-1 rounded-lg focus:border-redd-600"
+                      type="text"
+                      name="Game2-1st"
+                      id="g2First"
+                      list="proTeams"
+                      placeholder="pick team"
+                      onChange={(event) => setTeam2(event.target.value)}
+                    />
+                  </fieldset>
+                </div>
+
+                <div className="lg:basis-1/5 lg:flex lg: justify-center">
+                  <fieldset className="p-2 m-2 w-[360px] rounded-xl flex flex-col text-white bg-gradient-to-tl from-red-600 shadow-neon max-[1078px]:w-[508px] max-[580px]:w-64">
+                    <legend>3rd Place</legend>
+                    <label htmlFor="g3First">select team</label>
+                    <input
+                      required
+                      className="text-black p-1 rounded-lg focus:border-redd-600"
+                      type="text"
+                      name="Game3-1st"
+                      id="g3First"
+                      list="proTeams"
+                      placeholder="pick team"
+                      onChange={(event) => setTeam3(event.target.value)}
+                    />
+                  </fieldset>
+                </div>
               </div>
 
-              <div className="lg:basis-1/5 lg:flex lg: justify-center">
-                <fieldset className="p-2 m-2 w-64 rounded-xl flex flex-col text-white bg-gradient-to-tl from-red-600 shadow-neon">
-                  <legend>3rd Place</legend>
-                  <label htmlFor="g3First">select team</label>
-                  <input
-                    required
-                    className="text-black p-1 rounded-lg focus:border-redd-600"
-                    type="text"
-                    name="Game3-1st"
-                    id="g3First"
-                    list="proTeams"
-                    placeholder="pick team"
-                    onChange={(event) => setTeam3(event.target.value)}
-                  />
-                </fieldset>
-              </div>
+              <div className="flex gap-4 max-[1078px]:flex-col">
+                <div className="justify-center">
+                  <fieldset className="p-2 m-2 w-80 rounded-xl flex flex-col text-white bg-gradient-to-tl from-red-600 shadow-neon max-[1078px]:w-[508px] max-[580px]:w-64">
+                    <legend>4th Place</legend>
+                    <label htmlFor="g4First">select team</label>
+                    <input
+                      required
+                      className="text-black p-1 rounded-lg focus:border-redd-600"
+                      type="text"
+                      name="Game4-1st"
+                      id="g4First"
+                      list="proTeams"
+                      placeholder="pick team"
+                      onChange={(event) => setTeam4(event.target.value)}
+                    />
+                  </fieldset>
+                </div>
 
-              <div className="lg:basis-1/5 lg:flex lg: justify-center">
-                <fieldset className="p-2 m-2 w-64 rounded-xl flex flex-col text-white bg-gradient-to-tl from-red-600 shadow-neon">
-                  <legend>4th Place</legend>
-                  <label htmlFor="g4First">select team</label>
-                  <input
-                    required
-                    className="text-black p-1 rounded-lg focus:border-redd-600"
-                    type="text"
-                    name="Game4-1st"
-                    id="g4First"
-                    list="proTeams"
-                    placeholder="pick team"
-                    onChange={(event) => setTeam4(event.target.value)}
-                  />
-                </fieldset>
-              </div>
+                <div className="justify-center">
+                  <fieldset className="p-2 m-2 w-80 rounded-xl flex flex-col text-white bg-gradient-to-tl from-red-600 shadow-neon max-[1078px]:w-[508px] max-[580px]:w-64">
+                    <legend>5th Place</legend>
+                    <label htmlFor="g5First">select team</label>
+                    <input
+                      required
+                      className="text-black p-1 rounded-lg focus:border-redd-600"
+                      type="text"
+                      name="Game5-1st"
+                      id="g5First"
+                      list="proTeams"
+                      placeholder="pick team"
+                      onChange={(event) => setTeam5(event.target.value)}
+                    />
+                  </fieldset>
+                </div>
 
-              <div className="lg:basis-1/5 lg:flex lg: justify-center">
-                <fieldset className="p-2 m-2 w-64 rounded-xl flex flex-col text-white bg-gradient-to-tl from-red-600 shadow-neon">
-                  <legend>5th Place</legend>
-                  <label htmlFor="g5First">select team</label>
-                  <input
-                    required
-                    className="text-black p-1 rounded-lg focus:border-redd-600"
-                    type="text"
-                    name="Game5-1st"
-                    id="g5First"
-                    list="proTeams"
-                    placeholder="pick team"
-                    onChange={(event) => setTeam5(event.target.value)}
-                  />
-                </fieldset>
-              </div>
-
-              <div className="lg:basis-1/5 lg:flex lg: justify-center">
-                <fieldset className="p-2 m-2 w-64 rounded-xl flex flex-col text-white bg-gradient-to-tl from-red-600 shadow-neon">
-                  <legend>6th Place</legend>
-                  <label htmlFor="g6First">select team</label>
-                  <input
-                    required
-                    className="text-black p-1 rounded-lg focus:border-redd-600"
-                    type="text"
-                    name="Game6-1st"
-                    id="g6First"
-                    list="proTeams"
-                    placeholder="pick team"
-                    onChange={(event) => setTeam6(event.target.value)}
-                  />
-                </fieldset>
+                <div className="justify-center">
+                  <fieldset className="p-2 m-2 w-80 rounded-xl flex flex-col text-white bg-gradient-to-tl from-red-600 shadow-neon max-[1078px]:w-[508px] max-[580px]:w-64">
+                    <legend>6th Place</legend>
+                    <label htmlFor="g6First">select team</label>
+                    <input
+                      required
+                      className="text-black p-1 rounded-lg focus:border-redd-600"
+                      type="text"
+                      name="Game6-1st"
+                      id="g6First"
+                      list="proTeams"
+                      placeholder="pick team"
+                      onChange={(event) => setTeam6(event.target.value)}
+                    />
+                  </fieldset>
+                </div>
               </div>
             </div>
             <Footer />
+          </div>
+          {/* <h2 className="mt-2 text-center text-white">Avax</h2> */}
+
+          <div className="w-full flex justify-center items-center">
+            <button
+              className="text-white px-16 py-2 cursor-pointer hover:scale-110 rounded bg-gradient-to-b from-red-600 shadow-neon"
+              onClick={(event: any) => mintNFT(event)}
+              // disabled={isConnected ? false : true}
+            >
+              {buttonText}
+            </button>
           </div>
 
           <datalist id="proTeams">
@@ -418,6 +440,15 @@ function Picks() {
             <option value="BR Demonz"></option>
           </datalist>
         </div>
+      </div>
+      <div className="flex flex-col justify-center items-center gap-2 -translate-y-[160px] max-[1600px]:-translate-x-[48px] max-[1520px]:-translate-x-[86px] max-[1400px]:-translate-x-[120px] max-[1386px]:hidden">
+        <span className="text-white text-[20px]">Elite Club</span>
+        <Image
+          alt="Elite club"
+          src={eliteClubImg.src}
+          width={eliteClubImg.width}
+          height={eliteClubImg.height}
+        />
       </div>
     </div>
   );
