@@ -24,10 +24,9 @@ function Header() {
       <div
         className={`mr-4 gap-6 max-sm:flex-col-reverse flex items-center max-[800px]:hidden`}
       >
-        <h3 className="max-md:hidden p-1 bg-red-500 rounded-xl">Beta</h3>
-        <Link href="/Leaderboard" className="text-white">
+        {/* <Link href="/Leaderboard" className="text-white">
           Leaderboard
-        </Link>
+        </Link> */}
         <Link href="/Profile" className="text-white">
           Profile
         </Link>
