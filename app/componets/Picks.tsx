@@ -258,7 +258,7 @@ function Picks() {
                   {/* <label htmlFor="g1First">select team</label> */}
                   <input
                     required
-                    className="text-black bg-[#1b1b1b80] h-[40px] p-1 rounded-lg focus:border-redd-600"
+                    className="text-white bg-[#1b1b1b80] h-[40px] p-1 rounded-lg focus:border-redd-600"
                     type="text"
                     name="Game1-1st"
                     id="g1First"
@@ -272,7 +272,7 @@ function Picks() {
                   {/* <label htmlFor="g1Second">Total Points</label> */}
                   <input
                     required
-                    className="text-black bg-[#1b1b1b80] h-[40px] p-1 rounded-lg focus:border-redd-600"
+                    className="text-white bg-[#1b1b1b80] h-[40px] p-1 rounded-lg focus:border-redd-600"
                     type="number"
                     name="Game1-2nd"
                     id="g1Second"
@@ -299,7 +299,7 @@ function Picks() {
                     {/* <label htmlFor="g2First">select team</label> */}
                     <input
                       required
-                      className="text-black bg-[#1b1b1b80] h-[40px] p-1 rounded-lg focus:border-redd-600"
+                      className="text-white bg-[#1b1b1b80] h-[40px] p-1 rounded-lg focus:border-redd-600"
                       type="text"
                       name="Game2-1st"
                       id="g2First"
@@ -316,7 +316,7 @@ function Picks() {
                     {/* <label htmlFor="g3First">select team</label> */}
                     <input
                       required
-                      className="text-black bg-[#1b1b1b80] h-[40px] p-1 rounded-lg focus:border-redd-600"
+                      className="text-white bg-[#1b1b1b80] h-[40px] p-1 rounded-lg focus:border-redd-600"
                       type="text"
                       name="Game3-1st"
                       id="g3First"
@@ -335,7 +335,7 @@ function Picks() {
                     {/* <label htmlFor="g4First">select team</label> */}
                     <input
                       required
-                      className="text-black bg-[#1b1b1b80] h-[40px] p-1 rounded-lg focus:border-redd-600"
+                      className="text-white bg-[#1b1b1b80] h-[40px] p-1 rounded-lg focus:border-redd-600"
                       type="text"
                       name="Game4-1st"
                       id="g4First"
@@ -352,7 +352,7 @@ function Picks() {
                     {/* <label htmlFor="g5First">select team</label> */}
                     <input
                       required
-                      className="text-black bg-[#1b1b1b80] h-[40px] p-1 rounded-lg focus:border-redd-600"
+                      className="text-white bg-[#1b1b1b80] h-[40px] p-1 rounded-lg focus:border-redd-600"
                       type="text"
                       name="Game5-1st"
                       id="g5First"
@@ -369,7 +369,7 @@ function Picks() {
                     {/* <label htmlFor="g6First">select team</label> */}
                     <input
                       required
-                      className="text-black bg-[#1b1b1b80] h-[40px] p-1 rounded-lg focus:border-redd-600"
+                      className="text-white bg-[#1b1b1b80] h-[40px] p-1 rounded-lg focus:border-redd-600"
                       type="text"
                       name="Game6-1st"
                       id="g6First"

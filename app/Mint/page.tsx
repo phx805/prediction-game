@@ -5,7 +5,7 @@ import Picks from "../componets/Picks";
 import { useAccount } from "wagmi";
 import { useRouter } from "next/navigation";
 
-function page() {
+const page: React.FC = () => {
   const { isConnected } = useAccount();
   const router = useRouter();
   useEffect(() => {
