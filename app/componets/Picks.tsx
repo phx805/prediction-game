@@ -13,6 +13,7 @@ import Image from "next/image";
 import researchTeamImg from "@/public/assets/imgs/researchTeam.png";
 import eliteClubImg from "@/public/assets/imgs/eliteClub.png";
 import Button from "./basic/Button";
+import { useRouter } from "next/navigation";
 
 function Picks() {
   const [buttonText, setButtonText] = useState("Mint");
@@ -27,6 +28,10 @@ function Picks() {
   const [score, setScore] = useState<String>("");
 
   const { isConnected } = useAccount();
+  const router = useRouter();
+  useEffect(() => {
+    if (!isConnected) router.push("/");
+  });
 
   // const API_KEY =
   //   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweDg5NTM3ODM5OGMxMDQxMjFlM2MyNDdkMTkxREU0OGRlNzc0ZTBDMDQiLCJpc3MiOiJuZnQtc3RvcmFnZSIsImlhdCI6MTY4ODUwNDkxNDU5NCwibmFtZSI6IkFwZXgifQ.UYBm8hj2ITLiznEz5ApQMKah_KQhyuPOAZB53sxw4rI";
@@ -208,7 +213,7 @@ function Picks() {
   };
 
   return (
-    <div className="flex justify-center items-center h-full">
+    <div className="flex justify-center items-center h-full bg-cover bg-no-repeat bg-mint-bg">
       <div className="flex flex-col justify-center items-center gap-2 -translate-y-[160px] max-[1600px]:translate-x-[48px] max-[1520px]:translate-x-[86px] max-[1400px]:translate-x-[120px] max-[1386px]:hidden">
         <span className="text-white text-[20px]">Research Teams</span>
         <Image
@@ -258,7 +263,7 @@ function Picks() {
                   {/* <label htmlFor="g1First">select team</label> */}
                   <input
                     required
-                    className="text-black bg-[#1b1b1b80] h-[40px] p-1 rounded-lg focus:border-redd-600"
+                    className="text-white bg-[#1b1b1b80] h-[40px] p-1 rounded-lg focus:border-redd-600"
                     type="text"
                     name="Game1-1st"
                     id="g1First"
@@ -272,7 +277,7 @@ function Picks() {
                   {/* <label htmlFor="g1Second">Total Points</label> */}
                   <input
                     required
-                    className="text-black bg-[#1b1b1b80] h-[40px] p-1 rounded-lg focus:border-redd-600"
+                    className="text-white bg-[#1b1b1b80] h-[40px] p-1 rounded-lg focus:border-redd-600"
                     type="number"
                     name="Game1-2nd"
                     id="g1Second"
@@ -282,12 +287,6 @@ function Picks() {
                 </div>
               </fieldset>
             </div>
-
-            {/* <Link href="https://liquipedia.net/apexlegends/Apex_Legends_Global_Series/2024/Split_1/Pro_League/North_America/Matches">
-              <div className="p-2 m-2 hover:bg-[#121c31] text-white text-2xl rounded-md">
-                Pro League Groups
-              </div>
-            </Link> */}
           </div>
 
           <div className="flex flex-col items-center">
@@ -299,7 +298,7 @@ function Picks() {
                     {/* <label htmlFor="g2First">select team</label> */}
                     <input
                       required
-                      className="text-black bg-[#1b1b1b80] h-[40px] p-1 rounded-lg focus:border-redd-600"
+                      className="text-white bg-[#1b1b1b80] h-[40px] p-1 rounded-lg focus:border-redd-600"
                       type="text"
                       name="Game2-1st"
                       id="g2First"
@@ -316,7 +315,7 @@ function Picks() {
                     {/* <label htmlFor="g3First">select team</label> */}
                     <input
                       required
-                      className="text-black bg-[#1b1b1b80] h-[40px] p-1 rounded-lg focus:border-redd-600"
+                      className="text-white bg-[#1b1b1b80] h-[40px] p-1 rounded-lg focus:border-redd-600"
                       type="text"
                       name="Game3-1st"
                       id="g3First"
@@ -335,7 +334,7 @@ function Picks() {
                     {/* <label htmlFor="g4First">select team</label> */}
                     <input
                       required
-                      className="text-black bg-[#1b1b1b80] h-[40px] p-1 rounded-lg focus:border-redd-600"
+                      className="text-white bg-[#1b1b1b80] h-[40px] p-1 rounded-lg focus:border-redd-600"
                       type="text"
                       name="Game4-1st"
                       id="g4First"
@@ -352,7 +351,7 @@ function Picks() {
                     {/* <label htmlFor="g5First">select team</label> */}
                     <input
                       required
-                      className="text-black bg-[#1b1b1b80] h-[40px] p-1 rounded-lg focus:border-redd-600"
+                      className="text-white bg-[#1b1b1b80] h-[40px] p-1 rounded-lg focus:border-redd-600"
                       type="text"
                       name="Game5-1st"
                       id="g5First"
@@ -369,7 +368,7 @@ function Picks() {
                     {/* <label htmlFor="g6First">select team</label> */}
                     <input
                       required
-                      className="text-black bg-[#1b1b1b80] h-[40px] p-1 rounded-lg focus:border-redd-600"
+                      className="text-white bg-[#1b1b1b80] h-[40px] p-1 rounded-lg focus:border-redd-600"
                       type="text"
                       name="Game6-1st"
                       id="g6First"
@@ -385,13 +384,18 @@ function Picks() {
           </div>
           {/* <h2 className="mt-2 text-center text-white">Avax</h2> */}
 
-          <div className="w-full flex justify-center items-center">
+          <div className="w-full flex flex-col justify-center items-center">
             <Button
               text={buttonText}
               // className="text-white px-16 py-2 cursor-pointer hover:scale-110 rounded bg-gradient-to-b from-red-600 shadow-neon"
               onClick={(event: any) => mintNFT(event)}
               // disabled={isConnected ? false : true}
             />
+            <Link href="https://liquipedia.net/apexlegends/Apex_Legends_Global_Series/2024/Split_1/Pro_League/North_America/Matches">
+              <div className="p-2 m-2 hover:bg-[#121c31] text-white text-2xl rounded-md">
+                Pro League Groups
+              </div>
+            </Link>
           </div>
 
           <datalist id="proTeams">

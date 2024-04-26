@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <>
       <Header />
-      <div className="flex justify-center items-center w-full h-full px-4 pb-8 bg">
+      <div className="flex justify-center items-center w-full h-full px-4 pb-8 bg-cover bg-no-repeat bg-home-bg">
         <Landing />
         <Image
           alt="apex image"

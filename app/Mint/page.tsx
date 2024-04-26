@@ -2,15 +2,8 @@
 import React, { useEffect } from "react";
 import Header from "../componets/Header";
 import Picks from "../componets/Picks";
-import { useAccount } from "wagmi";
-import { useRouter } from "next/navigation";
 
 function page() {
-  const { isConnected } = useAccount();
-  const router = useRouter();
-  useEffect(() => {
-    if (!isConnected) router.push("/");
-  });
   return (
     <>
       <Header />
