@@ -141,7 +141,7 @@ function Picks() {
     return imageURIs[imageURIs.length - 1].uri;
   }
 
-  const contractAddr = "0xB8B88636c85F9A00145a220D7449b129edb75495";
+  const contractAddr = "0x8C0a5694a424F2d2D742B5A419C3A6306723270C";
   const client = new NFTStorage({
     token: process.env.NEXT_PUBLIC_API_KEY as string,
   });
@@ -153,7 +153,7 @@ function Picks() {
     abi: abi,
     functionName: "mintNFT",
     args: [2],
-    value: parseEther("0.01"),
+    value: parseEther("0.1"),
   });
 
   const mintNFT = async (event: React.FormEvent<HTMLFormElement>) => {
@@ -216,12 +216,14 @@ function Picks() {
     <div className="flex justify-center items-center h-full bg-cover bg-no-repeat bg-mint-bg">
       <div className="flex flex-col justify-center items-center gap-2 -translate-y-[160px] max-[1600px]:translate-x-[48px] max-[1520px]:translate-x-[86px] max-[1400px]:translate-x-[120px] max-[1386px]:hidden">
         <span className="text-white text-[20px]">Research Teams</span>
+        <Link className="hover:bg-[#162036bc] p-4 rounded-lg" href="https://liquipedia.net/apexlegends/Apex_Legends_Global_Series/2024/Split_1/Playoffs/Group_Stage">
         <Image
           alt="research teams"
           src={researchTeamImg.src}
           width={researchTeamImg.width}
           height={researchTeamImg.height}
         />
+        </Link>
       </div>
 
       <div
@@ -231,7 +233,7 @@ function Picks() {
         <div className="flex justify-start flex-col gap-4 max-[1078px]:py-4 max-[1078px]:px-4 max-[580px]:w-full">
           <div className="flex flex-col items-center">
             <div className="max-w-xs max-h-80 flex gap-4 items-center flex-col rounded-xl">
-              <h1 className="text-white text-2xl font-medium">
+              <h1 className=" text-white text-2xl font-medium underline decoration-4 decoration-[#162036]">
                 Make Your Predictions
               </h1>
               <div className="flex justify-center">
@@ -241,7 +243,7 @@ function Picks() {
                   </legend>
                   <select
                     required
-                    className="text-white focus:ring-redd-600 bg-[#1b1b1b80] rounded-lg focus:border-redd-600 h-[40px] px-4"
+                    className="text-white focus:ring-redd-600 bg-[#1b1b1b80] rounded-lg focus:border-redd-600 h-[40px] px-4 hover:bg-[#162036bc]"
                     name="id"
                     defaultValue={"DEFAULT"}
                     onChange={(event) => setTournament(event.target.value)}
@@ -258,12 +260,12 @@ function Picks() {
 
               {/* <fieldset className="p-2 w-64 rounded-xl flex gap-4 text-white bg-gradient-to-tl from-red-600 shadow-neon max-[580px]:flex-col"> */}
               <fieldset className="p-2 w-64 rounded-xl flex gap-4 text-white bg-gradient-to-tl  max-[580px]:flex-col">
-                <legend className="w-full text-center">1st Place</legend>
+                <legend className="w-fit p-1 text-center bg-[#162036bc] rounded-lg">1st Place</legend>
                 <div className="flex flex-col justify-start items-start">
                   {/* <label htmlFor="g1First">select team</label> */}
                   <input
                     required
-                    className="text-white bg-[#1b1b1b80] h-[40px] p-1 rounded-lg focus:border-redd-600"
+                    className="text-white bg-[#1b1b1b80] h-[40px] p-1 rounded-lg focus:border-redd-600 hover:bg-[#162036bc]"
                     type="text"
                     name="Game1-1st"
                     id="g1First"
@@ -277,7 +279,7 @@ function Picks() {
                   {/* <label htmlFor="g1Second">Total Points</label> */}
                   <input
                     required
-                    className="text-white bg-[#1b1b1b80] h-[40px] p-1 rounded-lg focus:border-redd-600"
+                    className="text-white bg-[#1b1b1b80] h-[40px] p-1 rounded-lg focus:border-redd-600 hover:bg-[#162036bc]"
                     type="number"
                     name="Game1-2nd"
                     id="g1Second"
@@ -294,11 +296,11 @@ function Picks() {
               <div className="flex gap-4 max-[1078px]:flex-col">
                 <div className="lg:basis-1/5 lg:flex lg: justify-center">
                   <fieldset className="p-2 m-2 w-[360px] rounded-xl flex flex-col text-white bg-gradient-to-tl  max-[1078px]:w-[508px] max-[580px]:w-64">
-                    <legend className="w-full text-center">2nd Place</legend>
+                    <legend className="w-fit p-1 text-center bg-[#162036bc] rounded-xl">2nd Place</legend>
                     {/* <label htmlFor="g2First">select team</label> */}
                     <input
                       required
-                      className="text-white bg-[#1b1b1b80] h-[40px] p-1 rounded-lg focus:border-redd-600"
+                      className="text-white bg-[#1b1b1b80] h-[40px] p-1 rounded-lg focus:border-redd-600 hover:bg-[#162036bc]"
                       type="text"
                       name="Game2-1st"
                       id="g2First"
@@ -311,11 +313,11 @@ function Picks() {
 
                 <div className="lg:basis-1/5 lg:flex lg: justify-center">
                   <fieldset className="p-2 m-2 w-[360px] rounded-xl flex flex-col text-white bg-gradient-to-tl  max-[1078px]:w-[508px] max-[580px]:w-64">
-                    <legend className="w-full text-center">3rd Place</legend>
+                    <legend className="w-fit p-1 text-center bg-[#162036bc] rounded-xl">3rd Place</legend>
                     {/* <label htmlFor="g3First">select team</label> */}
                     <input
                       required
-                      className="text-white bg-[#1b1b1b80] h-[40px] p-1 rounded-lg focus:border-redd-600"
+                      className="text-white bg-[#1b1b1b80] h-[40px] p-1 rounded-lg focus:border-redd-600 hover:bg-[#162036bc]"
                       type="text"
                       name="Game3-1st"
                       id="g3First"
@@ -330,11 +332,11 @@ function Picks() {
               <div className="flex gap-4 max-[1078px]:flex-col">
                 <div className="justify-center">
                   <fieldset className="p-2 m-2 w-80 rounded-xl flex flex-col text-white bg-gradient-to-tl  max-[1078px]:w-[508px] max-[580px]:w-64">
-                    <legend className="w-full text-center">4th Place</legend>
+                    <legend className="w-fit p-1 text-center bg-[#162036bc] rounded-xl">4th Place</legend>
                     {/* <label htmlFor="g4First">select team</label> */}
                     <input
                       required
-                      className="text-white bg-[#1b1b1b80] h-[40px] p-1 rounded-lg focus:border-redd-600"
+                      className="text-white bg-[#1b1b1b80] h-[40px] p-1 rounded-lg focus:border-redd-600 hover:bg-[#162036bc]"
                       type="text"
                       name="Game4-1st"
                       id="g4First"
@@ -347,11 +349,11 @@ function Picks() {
 
                 <div className="justify-center">
                   <fieldset className="p-2 m-2 w-80 rounded-xl flex flex-col text-white bg-gradient-to-tl  max-[1078px]:w-[508px] max-[580px]:w-64">
-                    <legend className="w-full text-center">5th Place</legend>
+                    <legend className="w-fit p-1 text-center bg-[#162036bc] rounded-xl">5th Place</legend>
                     {/* <label htmlFor="g5First">select team</label> */}
                     <input
                       required
-                      className="text-white bg-[#1b1b1b80] h-[40px] p-1 rounded-lg focus:border-redd-600"
+                      className="text-white bg-[#1b1b1b80] h-[40px] p-1 rounded-lg focus:border-redd-600 hover:bg-[#162036bc]"
                       type="text"
                       name="Game5-1st"
                       id="g5First"
@@ -364,11 +366,11 @@ function Picks() {
 
                 <div className="justify-center">
                   <fieldset className="p-2 m-2 w-80 rounded-xl flex flex-col text-white bg-gradient-to-tl  max-[1078px]:w-[508px] max-[580px]:w-64">
-                    <legend className="w-full text-center">6th Place</legend>
+                    <legend className="w-fit p-1 text-center bg-[#162036bc] rounded-lg">6th Place</legend>
                     {/* <label htmlFor="g6First">select team</label> */}
                     <input
                       required
-                      className="text-white bg-[#1b1b1b80] h-[40px] p-1 rounded-lg focus:border-redd-600"
+                      className="text-white bg-[#1b1b1b80] h-[40px] p-1 rounded-lg focus:border-redd-600 hover:bg-[#162036bc]"
                       type="text"
                       name="Game6-1st"
                       id="g6First"
@@ -391,11 +393,11 @@ function Picks() {
               onClick={(event: any) => mintNFT(event)}
               // disabled={isConnected ? false : true}
             />
-            <Link href="https://liquipedia.net/apexlegends/Apex_Legends_Global_Series/2024/Split_1/Pro_League/North_America/Matches">
+            {/* <Link href="https://liquipedia.net/apexlegends/Apex_Legends_Global_Series/2024/Split_1/Pro_League/North_America/Matches">
               <div className="p-2 m-2 hover:bg-[#121c31] text-white text-2xl rounded-md">
                 Pro League Groups
               </div>
-            </Link>
+            </Link> */}
           </div>
 
           <datalist id="proTeams">
@@ -448,12 +450,14 @@ function Picks() {
       </div>
       <div className="flex flex-col justify-center items-center gap-2 -translate-y-[160px] max-[1600px]:-translate-x-[48px] max-[1520px]:-translate-x-[86px] max-[1400px]:-translate-x-[120px] max-[1386px]:hidden">
         <span className="text-white text-[20px]">Elite Club</span>
-        <Image
+        <Link href="/EliteClub">
+        <Image className="hover:bg-[#162036bc] p-4 rounded-lg"
           alt="Elite club"
           src={eliteClubImg.src}
           width={eliteClubImg.width}
           height={eliteClubImg.height}
         />
+        </Link>
       </div>
     </div>
   );
