@@ -12,6 +12,8 @@ import Image from "next/image";
 
 import researchTeamImg from "@/public/assets/imgs/researchTeam.png";
 import eliteClubImg from "@/public/assets/imgs/eliteClub.png";
+import trophyImg from "@/public/assets/ApexTrophy.png";
+
 import Button from "./basic/Button";
 import { useRouter } from "next/navigation";
 
@@ -216,19 +218,23 @@ function Picks() {
     <div className="flex justify-center items-center h-full bg-cover bg-no-repeat bg-mint-bg">
       <div className="flex flex-col justify-center items-center gap-2 -translate-y-[160px] max-[1600px]:translate-x-[48px] max-[1520px]:translate-x-[86px] max-[1400px]:translate-x-[120px] max-[1386px]:hidden">
         <span className="text-white text-[20px]">Research Teams</span>
-        <Link className="hover:bg-[#162036bc] p-4 rounded-lg" href="https://liquipedia.net/apexlegends/Apex_Legends_Global_Series/2024/Split_1/Playoffs/Group_Stage">
-        <Image
-          alt="research teams"
-          src={researchTeamImg.src}
-          width={researchTeamImg.width}
-          height={researchTeamImg.height}
-        />
+        <Link
+          className="hover:bg-[#162036bc] p-4 rounded-lg"
+          href="https://liquipedia.net/apexlegends/Apex_Legends_Global_Series/2024/Split_1/Playoffs/Group_Stage"
+        >
+          <Image
+            alt="research teams"
+            src={researchTeamImg.src}
+            width={researchTeamImg.width}
+            height={researchTeamImg.height}
+            className="w-[320px]"
+          />
         </Link>
       </div>
 
       <div
         id="myForm"
-        className="max-[1078px]:h-full max-[1078px]:py-[124px] max-[1078px]:overflow-y-auto max-[580px]:w-full max-[580px]:px-4"
+        className="max-[1078px]:h-full max-[1078px]:py-[124px] max-[1078px]:overflow-y-auto max-[580px]:w-full max-[580px]:px-4 z-10"
       >
         <div className="flex justify-start flex-col gap-4 max-[1078px]:py-4 max-[1078px]:px-4 max-[580px]:w-full">
           <div className="flex flex-col items-center">
@@ -260,7 +266,9 @@ function Picks() {
 
               {/* <fieldset className="p-2 w-64 rounded-xl flex gap-4 text-white bg-gradient-to-tl from-red-600 shadow-neon max-[580px]:flex-col"> */}
               <fieldset className="p-2 w-64 rounded-xl flex gap-4 text-white bg-gradient-to-tl  max-[580px]:flex-col">
-                <legend className="w-fit p-1 text-center bg-[#162036bc] rounded-lg">1st Place</legend>
+                <legend className="w-fit p-1 text-center bg-[#162036bc] rounded-lg">
+                  1st Place
+                </legend>
                 <div className="flex flex-col justify-start items-start">
                   {/* <label htmlFor="g1First">select team</label> */}
                   <input
@@ -296,7 +304,9 @@ function Picks() {
               <div className="flex gap-4 max-[1078px]:flex-col">
                 <div className="lg:basis-1/5 lg:flex lg: justify-center">
                   <fieldset className="p-2 m-2 w-[360px] rounded-xl flex flex-col text-white bg-gradient-to-tl  max-[1078px]:w-[508px] max-[580px]:w-64">
-                    <legend className="w-fit p-1 text-center bg-[#162036bc] rounded-xl">2nd Place</legend>
+                    <legend className="w-fit p-1 text-center bg-[#162036bc] rounded-xl">
+                      2nd Place
+                    </legend>
                     {/* <label htmlFor="g2First">select team</label> */}
                     <input
                       required
@@ -313,7 +323,9 @@ function Picks() {
 
                 <div className="lg:basis-1/5 lg:flex lg: justify-center">
                   <fieldset className="p-2 m-2 w-[360px] rounded-xl flex flex-col text-white bg-gradient-to-tl  max-[1078px]:w-[508px] max-[580px]:w-64">
-                    <legend className="w-fit p-1 text-center bg-[#162036bc] rounded-xl">3rd Place</legend>
+                    <legend className="w-fit p-1 text-center bg-[#162036bc] rounded-xl">
+                      3rd Place
+                    </legend>
                     {/* <label htmlFor="g3First">select team</label> */}
                     <input
                       required
@@ -332,7 +344,9 @@ function Picks() {
               <div className="flex gap-4 max-[1078px]:flex-col">
                 <div className="justify-center">
                   <fieldset className="p-2 m-2 w-80 rounded-xl flex flex-col text-white bg-gradient-to-tl  max-[1078px]:w-[508px] max-[580px]:w-64">
-                    <legend className="w-fit p-1 text-center bg-[#162036bc] rounded-xl">4th Place</legend>
+                    <legend className="w-fit p-1 text-center bg-[#162036bc] rounded-xl">
+                      4th Place
+                    </legend>
                     {/* <label htmlFor="g4First">select team</label> */}
                     <input
                       required
@@ -349,7 +363,9 @@ function Picks() {
 
                 <div className="justify-center">
                   <fieldset className="p-2 m-2 w-80 rounded-xl flex flex-col text-white bg-gradient-to-tl  max-[1078px]:w-[508px] max-[580px]:w-64">
-                    <legend className="w-fit p-1 text-center bg-[#162036bc] rounded-xl">5th Place</legend>
+                    <legend className="w-fit p-1 text-center bg-[#162036bc] rounded-xl">
+                      5th Place
+                    </legend>
                     {/* <label htmlFor="g5First">select team</label> */}
                     <input
                       required
@@ -366,7 +382,9 @@ function Picks() {
 
                 <div className="justify-center">
                   <fieldset className="p-2 m-2 w-80 rounded-xl flex flex-col text-white bg-gradient-to-tl  max-[1078px]:w-[508px] max-[580px]:w-64">
-                    <legend className="w-fit p-1 text-center bg-[#162036bc] rounded-lg">6th Place</legend>
+                    <legend className="w-fit p-1 text-center bg-[#162036bc] rounded-lg">
+                      6th Place
+                    </legend>
                     {/* <label htmlFor="g6First">select team</label> */}
                     <input
                       required
@@ -451,14 +469,24 @@ function Picks() {
       <div className="flex flex-col justify-center items-center gap-2 -translate-y-[160px] max-[1600px]:-translate-x-[48px] max-[1520px]:-translate-x-[86px] max-[1400px]:-translate-x-[120px] max-[1386px]:hidden">
         <span className="text-white text-[20px]">Elite Club</span>
         <Link href="/EliteClub">
-        <Image className="hover:bg-[#162036bc] p-4 rounded-lg"
-          alt="Elite club"
-          src={eliteClubImg.src}
-          width={eliteClubImg.width}
-          height={eliteClubImg.height}
-        />
+          <Image
+            className="hover:bg-[#162036bc] p-4 rounded-lg w-[320px]"
+            alt="Elite club"
+            src={eliteClubImg.src}
+            width={eliteClubImg.width}
+            height={eliteClubImg.height}
+          />
         </Link>
       </div>
+      {/* <div className="absolute flex justify-center items-center w-screen h-screen top-0 left-0 z-1">
+        <Image
+          alt="trophy"
+          src={trophyImg.src}
+          width={trophyImg.width}
+          height={trophyImg.height}
+          className="opacity-70 scale-150"
+        />
+      </div> */}
     </div>
   );
 }
