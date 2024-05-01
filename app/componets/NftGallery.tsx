@@ -60,7 +60,7 @@ const NFTGallery = () => {
         <span className="text-white text-[24px]">Loading data...</span>
       ) : (
         <div className="flex flex-col p-8 gap-3 w-full h-full">
-          <h1 className="text-white text-[24px]">Your NFT Gallery</h1>
+          <h1 className="mt-20 text-white text-[24px]">Your NFT Gallery</h1>
           <div className="flex gap-4 flex-wrap text-white">
             {nfts?.map((item, index) =>
               item.nft_data.map((sub_item) => (

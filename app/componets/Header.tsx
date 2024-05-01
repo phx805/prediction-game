@@ -17,7 +17,7 @@ function Header() {
       <div className="ml-4 gap-4 flex items-center">
         <Image src="/avalanche-avax-logo.svg" width={56} height={56} alt="" />
 
-        <Link href="/" className="text-white text-2xl">
+        <Link href="/" className="text-white text-4xl">
           Pro Predictions
         </Link>
       </div>

@@ -47,7 +47,7 @@ function Picks() {
       uri: [
         "Apex 1",
         "Common Game Pass",
-        "https://white-serious-slug-851.mypinata.cloud/ipfs/QmNNyQqyXPm8JrgUD6UbaQvMggxDtZypSZTXx9QU7YyJ15",
+        "https://drive.google.com/file/d/1FTdt_RspzslSnk7Wb8P46F1a-Bo41rs4/view?usp=drive_link",
       ],
       occurrence: 20,
     },
@@ -55,7 +55,7 @@ function Picks() {
       uri: [
         "Apex 3",
         "Common Game Pass",
-        "https://white-serious-slug-851.mypinata.cloud/ipfs/QmS3A6ptH8BgbGHWj9diyBd7AqKJuiCTxXJBDeYWXVsiMV",
+        "https://drive.google.com/file/d/1Tf6UwfkJ4gAtjom41xgzyiYHr5MFjttW/view?usp=drive_link",
       ],
       occurrence: 20,
     },
@@ -63,7 +63,7 @@ function Picks() {
       uri: [
         "Apex 2",
         "Rare Game Pass",
-        "https://white-serious-slug-851.mypinata.cloud/ipfs/QmTFEwYt5ncAp4wAQWRJxNb6HitJZvXRuLMDXPf1RambK4",
+        "https://drive.google.com/file/d/1NWTlDo8Tpb21UDZlAJQpVK3itJm-tMiI/view?usp=drive_link",
       ],
       occurrence: 15,
     },
@@ -71,7 +71,7 @@ function Picks() {
       uri: [
         "Puppet Master",
         "Rare Game Pass",
-        "https://white-serious-slug-851.mypinata.cloud/ipfs/QmYHaTJUEx8JydjWBwBzedrKVaqWyDoCwTJbAcZ5w9iQag",
+        "https://drive.google.com/file/d/1aLq04TK9jl90gLAjshedMMPBhsQRs3Lv/view?usp=drive_link",
       ],
       occurrence: 15,
     },
@@ -79,7 +79,7 @@ function Picks() {
       uri: [
         "Unmerciful",
         "Epic Game Pass",
-        "https://white-serious-slug-851.mypinata.cloud/ipfs/QmcbvwqYoTYAfcbp3yqtQMyxcTUM8ba4EeYn7MvgfjBNBG",
+        "https://drive.google.com/file/d/1_hAnRnqyYLNj4HSVA4Y2kMT-NiApHKme/view?usp=drive_link",
       ],
       occurrence: 7.5,
     },
@@ -87,7 +87,7 @@ function Picks() {
       uri: [
         "Dinna fash",
         "Epic Game Pass",
-        "https://white-serious-slug-851.mypinata.cloud/ipfs/QmbYa37wRN7Y3V7yHvyFnK3jDDc1g2zzdbBojjnujiQFdk",
+        "https://drive.google.com/file/d/1XV6UIl_B7pu8Jrh5AHU6mJ2GPsKPy-PD/view?usp=drive_link",
       ],
       occurrence: 7.5,
     },
@@ -95,7 +95,7 @@ function Picks() {
       uri: [
         "Just Business",
         "Legendary Game Pass",
-        "https://white-serious-slug-851.mypinata.cloud/ipfs/QmNkNVzPgsQEV5LNx9BDEzcmM9DkuyPqWqgDBzQ75GQPkZ",
+        "https://drive.google.com/file/d/1Ce2PY8PO8fSPHI34KPniEyYel9NMkDRP/view?usp=drive_link",
       ],
       occurrence: 5,
     },
@@ -103,7 +103,7 @@ function Picks() {
       uri: [
         "Get Some",
         "Legendary Game Pass",
-        "https://white-serious-slug-851.mypinata.cloud/ipfs/QmV4A6ZvMUzqwmAR6GgmhWV4GjFydUhRgnve1biZ8XZ3Yb",
+        "https://drive.google.com/file/d/1hyckY-Jy6xXCzzYMn5D3uA7K0gzyRYu2/view?usp=drive_link",
       ],
       occurrence: 5,
     },
@@ -111,7 +111,7 @@ function Picks() {
       uri: [
         "Champions",
         "Mythic Game Pass",
-        "https://white-serious-slug-851.mypinata.cloud/ipfs/QmVMkpd7eNcb3nba9EDiuYsAthBxrNb2Ze9sB5jaASGKzK",
+        "https://drive.google.com/file/d/1lNb-WE14goTm5rhqu_I5zpsd7GMWvUks/view?usp=drive_link",
       ],
       occurrence: 2.5,
     },
@@ -119,7 +119,7 @@ function Picks() {
       uri: [
         "Champions",
         "Mythic Game Pass",
-        "https://white-serious-slug-851.mypinata.cloud/ipfs/Qmf4x4ZwXtLEJQ8CsvyYekDsKMFn7asdBCq29SnKnMx6SC",
+        "https://drive.google.com/file/d/1BDvp9ewrhOlh0qxqH_N6erpCPq54vCkP/view?usp=drive_link",
       ],
       occurrence: 2.5,
     },
@@ -155,7 +155,7 @@ function Picks() {
     abi: abi,
     functionName: "mintNFT",
     args: [2],
-    value: parseEther("0.1"),
+    value: parseEther("1"),
   });
 
   const mintNFT = async (event: React.FormEvent<HTMLFormElement>) => {
@@ -217,7 +217,7 @@ function Picks() {
   return (
     <div className="flex justify-center items-center h-full bg-cover bg-no-repeat bg-mint-bg">
       <div className="flex flex-col justify-center items-center gap-2 -translate-y-[160px] max-[1600px]:translate-x-[48px] max-[1520px]:translate-x-[86px] max-[1400px]:translate-x-[120px] max-[1386px]:hidden">
-        <span className="text-white text-[20px]">Research Teams</span>
+        <span className="text-white py-1 px-2 bg-[#162036bc] rounded-lg text-[25px]">Research Teams</span>
         <Link
           className="hover:bg-[#162036bc] p-4 rounded-lg"
           href="https://liquipedia.net/apexlegends/Apex_Legends_Global_Series/2024/Split_1/Playoffs/Group_Stage"
@@ -238,8 +238,8 @@ function Picks() {
       >
         <div className="flex justify-start flex-col gap-4 max-[1078px]:py-4 max-[1078px]:px-4 max-[580px]:w-full">
           <div className="flex flex-col items-center">
-            <div className="max-w-xs max-h-80 flex gap-4 items-center flex-col rounded-xl">
-              <h1 className=" text-white text-2xl font-medium underline decoration-4 decoration-[#162036]">
+            <div className="max-w-s max-h-80 flex gap-4 items-center flex-col rounded-xl">
+              <h1 className=" text-white p-2 text-4xl font-medium bg-[#162036bc] rounded-lg">
                 Make Your Predictions
               </h1>
               <div className="flex justify-center">
@@ -467,8 +467,8 @@ function Picks() {
         </div>
       </div>
       <div className="flex flex-col justify-center items-center gap-2 -translate-y-[160px] max-[1600px]:-translate-x-[48px] max-[1520px]:-translate-x-[86px] max-[1400px]:-translate-x-[120px] max-[1386px]:hidden">
-        <span className="text-white text-[20px]">Elite Club</span>
-        <Link href="/EliteClub">
+        <span className="text-white py-1 px-4 bg-[#162036bc] rounded-lg text-[25px]">Elite Club</span>
+        <Link href="/Mint">
           <Image
             className="hover:bg-[#162036bc] p-4 rounded-lg w-[320px]"
             alt="Elite club"
