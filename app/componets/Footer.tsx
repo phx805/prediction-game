@@ -14,7 +14,7 @@ function Footer() {
           </div>
         </Link>
 
-        <Link href="https://discord.gg/UjpfkkGC">
+        <Link href="https://discord.gg/vHsxzAX3">
           <div className="hover:opacity-60 p-2 w-fit text-white rounded-md">
             <BsDiscord />
           </div>

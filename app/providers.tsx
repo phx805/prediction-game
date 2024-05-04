@@ -14,7 +14,7 @@ import '@rainbow-me/rainbowkit/styles.css';
 
 
 import { configureChains, createConfig, WagmiConfig } from 'wagmi';
-import { arbitrum, mainnet, optimism, polygon, polygonMumbai, avalancheFuji } from 'wagmi/chains';
+import { polygon, polygonMumbai, avalanche, avalancheFuji } from 'wagmi/chains';
 import { publicProvider } from 'wagmi/providers/public';
 
 
@@ -33,7 +33,7 @@ const Providers = ({ children }: { children: React.ReactNode }) => {
   }), []);
 
   const { chains, publicClient, webSocketPublicClient } = configureChains(
-    [avalancheFuji, polygonMumbai, polygon],
+    [avalanche],
     [publicProvider()]
   );
 

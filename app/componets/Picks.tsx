@@ -47,7 +47,7 @@ function Picks() {
       uri: [
         "Apex 1",
         "Common Game Pass",
-        "https://drive.google.com/file/d/1FTdt_RspzslSnk7Wb8P46F1a-Bo41rs4/view?usp=drive_link",
+        "https://jade-given-spoonbill-404.mypinata.cloud/ipfs/QmNNyQqyXPm8JrgUD6UbaQvMggxDtZypSZTXx9QU7YyJ15",
       ],
       occurrence: 20,
     },
@@ -55,7 +55,7 @@ function Picks() {
       uri: [
         "Apex 3",
         "Common Game Pass",
-        "https://drive.google.com/file/d/1Tf6UwfkJ4gAtjom41xgzyiYHr5MFjttW/view?usp=drive_link",
+        "https://jade-given-spoonbill-404.mypinata.cloud/ipfs/QmS3A6ptH8BgbGHWj9diyBd7AqKJuiCTxXJBDeYWXVsiMV",
       ],
       occurrence: 20,
     },
@@ -63,7 +63,7 @@ function Picks() {
       uri: [
         "Apex 2",
         "Rare Game Pass",
-        "https://drive.google.com/file/d/1NWTlDo8Tpb21UDZlAJQpVK3itJm-tMiI/view?usp=drive_link",
+        "https://jade-given-spoonbill-404.mypinata.cloud/ipfs/QmTFEwYt5ncAp4wAQWRJxNb6HitJZvXRuLMDXPf1RambK4",
       ],
       occurrence: 15,
     },
@@ -71,7 +71,7 @@ function Picks() {
       uri: [
         "Puppet Master",
         "Rare Game Pass",
-        "https://drive.google.com/file/d/1aLq04TK9jl90gLAjshedMMPBhsQRs3Lv/view?usp=drive_link",
+        "https://jade-given-spoonbill-404.mypinata.cloud/ipfs/QmYHaTJUEx8JydjWBwBzedrKVaqWyDoCwTJbAcZ5w9iQag",
       ],
       occurrence: 15,
     },
@@ -79,7 +79,7 @@ function Picks() {
       uri: [
         "Unmerciful",
         "Epic Game Pass",
-        "https://drive.google.com/file/d/1_hAnRnqyYLNj4HSVA4Y2kMT-NiApHKme/view?usp=drive_link",
+        "https://jade-given-spoonbill-404.mypinata.cloud/ipfs/QmcbvwqYoTYAfcbp3yqtQMyxcTUM8ba4EeYn7MvgfjBNBG",
       ],
       occurrence: 7.5,
     },
@@ -87,7 +87,7 @@ function Picks() {
       uri: [
         "Dinna fash",
         "Epic Game Pass",
-        "https://drive.google.com/file/d/1XV6UIl_B7pu8Jrh5AHU6mJ2GPsKPy-PD/view?usp=drive_link",
+        "https://jade-given-spoonbill-404.mypinata.cloud/ipfs/QmbYa37wRN7Y3V7yHvyFnK3jDDc1g2zzdbBojjnujiQFdk",
       ],
       occurrence: 7.5,
     },
@@ -95,7 +95,7 @@ function Picks() {
       uri: [
         "Just Business",
         "Legendary Game Pass",
-        "https://drive.google.com/file/d/1Ce2PY8PO8fSPHI34KPniEyYel9NMkDRP/view?usp=drive_link",
+        "https://jade-given-spoonbill-404.mypinata.cloud/ipfs/QmNkNVzPgsQEV5LNx9BDEzcmM9DkuyPqWqgDBzQ75GQPkZ",
       ],
       occurrence: 5,
     },
@@ -103,7 +103,7 @@ function Picks() {
       uri: [
         "Get Some",
         "Legendary Game Pass",
-        "https://drive.google.com/file/d/1hyckY-Jy6xXCzzYMn5D3uA7K0gzyRYu2/view?usp=drive_link",
+        "https://jade-given-spoonbill-404.mypinata.cloud/ipfs/QmV4A6ZvMUzqwmAR6GgmhWV4GjFydUhRgnve1biZ8XZ3Yb",
       ],
       occurrence: 5,
     },
@@ -111,7 +111,7 @@ function Picks() {
       uri: [
         "Champions",
         "Mythic Game Pass",
-        "https://drive.google.com/file/d/1lNb-WE14goTm5rhqu_I5zpsd7GMWvUks/view?usp=drive_link",
+        "https://jade-given-spoonbill-404.mypinata.cloud/ipfs/QmVMkpd7eNcb3nba9EDiuYsAthBxrNb2Ze9sB5jaASGKzK",
       ],
       occurrence: 2.5,
     },
@@ -119,7 +119,7 @@ function Picks() {
       uri: [
         "Champions",
         "Mythic Game Pass",
-        "https://drive.google.com/file/d/1BDvp9ewrhOlh0qxqH_N6erpCPq54vCkP/view?usp=drive_link",
+        "https://jade-given-spoonbill-404.mypinata.cloud/ipfs/Qmf4x4ZwXtLEJQ8CsvyYekDsKMFn7asdBCq29SnKnMx6SC",
       ],
       occurrence: 2.5,
     },
@@ -143,7 +143,7 @@ function Picks() {
     return imageURIs[imageURIs.length - 1].uri;
   }
 
-  const contractAddr = "0x8C0a5694a424F2d2D742B5A419C3A6306723270C";
+  const contractAddr = "0x88bC36b65E14Ded22299886005880f023aa87eAC";
   const client = new NFTStorage({
     token: process.env.NEXT_PUBLIC_API_KEY as string,
   });
@@ -155,7 +155,7 @@ function Picks() {
     abi: abi,
     functionName: "mintNFT",
     args: [2],
-    value: parseEther("1"),
+    value: parseEther("0.07"),
   });
 
   const mintNFT = async (event: React.FormEvent<HTMLFormElement>) => {
@@ -257,7 +257,7 @@ function Picks() {
                     <option value="DEFAULT" disabled>
                       Select Tournament
                     </option>
-                    <option>Split 1: May 2, CvsD</option>
+                    <option>Split 1: Winners Bracket</option>
                     {/* <option>Split 1: May 2, AvsB</option>
                     <option>Split 1: May 2, AvsD</option> */}
                   </select>
@@ -420,27 +420,27 @@ function Picks() {
 
           <datalist id="proTeams">
             {/* Group A */}
-            {/* <option value="DarkZero"></option>
-            <option value="NAVI"></option>
-            <option value="KINOTROPE"></option>
-            <option value="MDY White"></option>
+            <option value="DarkZero"></option>
+            {/* <option value="NAVI"></option> */}
+            {/* <option value="KINOTROPE"></option> */}
+            {/* <option value="MDY White"></option> */}
             <option value="VirtusPro"></option>
             <option value="Crazy Raccoon"></option>
             <option value="2R1C"></option>
-            <option value="Luminosity"></option>
-            <option value="Oxygen Esports"></option>
-            <option value="Never To Change"></option> */}
+            {/* <option value="Luminosity"></option> */}
+            {/* <option value="Oxygen Esports"></option> */}
+            {/* <option value="Never To Change"></option> */}
             {/* Group B */}
-            {/* <option value="Aurora Gaming"></option>
+            <option value="Aurora Gaming"></option>
             <option value="REJECT WINNITY"></option>
-            <option value="Tom Yum Kung"></option>
+            {/* <option value="Tom Yum Kung"></option> */}
             <option value="Liquid"></option>
-            <option value="Disguised"></option>
+            {/* <option value="Disguised"></option> */}
             <option value="Serenity"></option>
-            <option value="OMiT"></option>
+            {/* <option value="OMiT"></option> */}
             <option value="Red Rams"></option>
-            <option value="Cloud9"></option>
-            <option value="Geared Gaming"></option> */}
+            {/* <option value="Cloud9"></option> */}
+            {/* <option value="Geared Gaming"></option>  */}
             {/* Group C */}
             <option value="Fnatic"></option>
             <option value="Legends Gaming"></option>
@@ -448,21 +448,21 @@ function Picks() {
             <option value="Made in Heaven"></option>
             <option value="o7"></option>
             <option value="Elev8 Gaming"></option>
-            <option value="Boogie Boarders"></option>
-            <option value="NORTHEPTION"></option>
+            {/* <option value="Boogie Boarders"></option> */}
+            {/* <option value="NORTHEPTION"></option> */}
             <option value="FURIA"></option>
-            <option value="WMNDY"></option>
+            {/* <option value="WMNDY"></option> */}
             {/* Group D */}
-            <option value="Wonton Dumpling"></option>
+            {/* <option value="Wonton Dumpling"></option> */}
             <option value="Not Moist"></option>
             <option value="Alliance"></option>
-            <option value="RIDDLE"></option>
-            <option value="HAO"></option>
-            <option value="Passion UA"></option>
+            {/* <option value="RIDDLE"></option> */}
+            {/* <option value="HAO"></option> */}
+            {/* <option value="Passion UA"></option> */}
             <option value="SpaceStation"></option>
-            <option value="Heroez"></option>
+            {/* <option value="Heroez"></option> */}
             <option value="Complexity"></option>
-            <option value="BR Demonz"></option>
+            {/* <option value="BR Demonz"></option> */}
           </datalist>
         </div>
       </div>
