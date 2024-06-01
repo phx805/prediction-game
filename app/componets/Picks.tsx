@@ -143,7 +143,7 @@ function Picks() {
     return imageURIs[imageURIs.length - 1].uri;
   }
 
-  const contractAddr = "0x1a71439a96Ec825594654D05b6bA7fe130E8225e";
+  const contractAddr = "0x1E430daB4124d462356F151727607BE02F3cB2d6";
   const client = new NFTStorage({
     token: process.env.NEXT_PUBLIC_API_KEY as string,
   });
