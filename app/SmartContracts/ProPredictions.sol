@@ -12,7 +12,7 @@ contract ProPerdictions is ERC721, ERC721URIStorage, Ownable, ERC721Burnable {
 
     Counters.Counter private _tokenIdCounter;
 
-    uint256 private constant MAX_SUPPLY = 10000;
+    uint256 private constant MAX_SUPPLY = 1000;
 
     constructor() ERC721("ProPredictions", "PRO") {}
 

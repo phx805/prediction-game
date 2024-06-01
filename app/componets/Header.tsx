@@ -27,12 +27,8 @@ function Header() {
         {/* <Link href="/Leaderboard" className="text-white">
           Leaderboard
         </Link> */}
-        <Link href="/Profile" className="text-white">
-          Profile
-        </Link>
-        <Link href="/Tools" className="text-white">
-          Tools
-        </Link>
+        <Link href="/Profile" className="text-white"></Link>
+        <Link href="/Tools" className="text-white"></Link>
         <ConnectButton label="Connect" />
       </div>
       {visibleMenu && (
@@ -40,15 +36,9 @@ function Header() {
           className={`hidden mr-4 gap-6 max-sm:flex-col-reverse items-center max-[800px]:flex max-[800px]:flex-col max-[800px]:fixed max-[800px]:top-[90px] max-[800px]:right-0 max-[800px]:bg-black max-[800px]:rounded-[10px] max-[800px]:p-4`}
         >
           <h3 className="p-1 bg-red-500 rounded-xl max-[800px]:hidden">Beta</h3>
-          <Link href="/Leaderboard" className="text-white">
-            Leaderboard
-          </Link>
-          <Link href="/Profile" className="text-white">
-            Profile
-          </Link>
-          <Link href="/Tools" className="text-white">
-            Tools
-          </Link>
+          <Link href="/Leaderboard" className="text-white"></Link>
+          <Link href="/Profile" className="text-white"></Link>
+          <Link href="/Tools" className="text-white"></Link>
           <ConnectButton label="Connect" />
         </div>
       )}

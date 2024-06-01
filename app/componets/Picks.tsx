@@ -143,7 +143,7 @@ function Picks() {
     return imageURIs[imageURIs.length - 1].uri;
   }
 
-  const contractAddr = "0x88bC36b65E14Ded22299886005880f023aa87eAC";
+  const contractAddr = "0x1a71439a96Ec825594654D05b6bA7fe130E8225e";
   const client = new NFTStorage({
     token: process.env.NEXT_PUBLIC_API_KEY as string,
   });
@@ -220,7 +220,7 @@ function Picks() {
         <span className="text-white py-1 px-2 bg-[#162036bc] rounded-lg text-[25px]">Research Teams</span>
         <Link
           className="hover:bg-[#162036bc] p-4 rounded-lg"
-          href="https://liquipedia.net/apexlegends/Apex_Legends_Global_Series/2024/Split_1/Playoffs/Group_Stage"
+          href="https://liquipedia.net/apexlegends/Apex_Legends_Global_Series/2024/Split_2/Pro_League/North_America/Round_1"
         >
           <Image
             alt="research teams"
@@ -257,7 +257,7 @@ function Picks() {
                     <option value="DEFAULT" disabled>
                       Select Tournament
                     </option>
-                    <option>Split 1: Winners Bracket</option>
+                    <option>Round 1: AvsB</option>
                     {/* <option>Split 1: May 2, AvsB</option>
                     <option>Split 1: May 2, AvsD</option> */}
                   </select>
@@ -420,48 +420,49 @@ function Picks() {
 
           <datalist id="proTeams">
             {/* Group A */}
-            <option value="DarkZero"></option>
-            {/* <option value="NAVI"></option> */}
-            {/* <option value="KINOTROPE"></option> */}
-            {/* <option value="MDY White"></option> */}
-            <option value="VirtusPro"></option>
-            <option value="Crazy Raccoon"></option>
-            <option value="2R1C"></option>
-            {/* <option value="Luminosity"></option> */}
-            {/* <option value="Oxygen Esports"></option> */}
-            {/* <option value="Never To Change"></option> */}
-            {/* Group B */}
-            <option value="Aurora Gaming"></option>
-            <option value="REJECT WINNITY"></option>
-            {/* <option value="Tom Yum Kung"></option> */}
-            <option value="Liquid"></option>
-            {/* <option value="Disguised"></option> */}
-            <option value="Serenity"></option>
-            {/* <option value="OMiT"></option> */}
-            <option value="Red Rams"></option>
-            {/* <option value="Cloud9"></option> */}
-            {/* <option value="Geared Gaming"></option>  */}
-            {/* Group C */}
-            <option value="Fnatic"></option>
-            <option value="Legends Gaming"></option>
-            <option value="TSM"></option>
-            <option value="Made in Heaven"></option>
-            <option value="o7"></option>
+            <option value="Team Falcons"></option>
+            <option value="Spacestation Gaming"></option>
             <option value="Elev8 Gaming"></option>
-            {/* <option value="Boogie Boarders"></option> */}
-            {/* <option value="NORTHEPTION"></option> */}
+            <option value="Oxygen Esports"></option>
+            <option value="NRG"></option>
+            <option value="YUP"></option>
+            <option value="Most Hated"></option>
+            <option value="CCE UCX"></option>
+            <option value="WEAVE"></option>
+            <option value="Tripods"></option>
+            {/* Group B */}
+            <option value="Moist Esports"></option>
+            <option value="Luminosity"></option>
+            <option value="TSM"></option>
+            <option value="Complexity"></option>
+            <option value="SKD Mark"></option>
+            <option value="Eternal Esports"></option>
+            <option value="Ape Gang"></option>
+            <option value="The Edgers"></option>
+            <option value="NGNL Esports"></option>
+            <option value="Bored"></option> 
+            {/* Group C */}
+            {/* <option value="Cloud9"></option>
+            <option value="Disguised"></option>
+            <option value="Team Liquid"></option>
             <option value="FURIA"></option>
-            {/* <option value="WMNDY"></option> */}
+            <option value="Vanity"></option>
+            <option value="Native Gaming"></option>
+            <option value="Oblivion"></option>
+            <option value="Flat"></option>
+            <option value="Stallions"></option>
+            <option value="Tempr"></option> */}
+
             {/* Group D */}
             {/* <option value="Wonton Dumpling"></option> */}
-            <option value="Not Moist"></option>
-            <option value="Alliance"></option>
+            {/* <option value="Not Moist"></option> */}
+            {/* <option value="Alliance"></option> */}
             {/* <option value="RIDDLE"></option> */}
             {/* <option value="HAO"></option> */}
             {/* <option value="Passion UA"></option> */}
-            <option value="SpaceStation"></option>
+            {/* <option value="SpaceStation"></option> */}
             {/* <option value="Heroez"></option> */}
-            <option value="Complexity"></option>
+            {/* <option value="Complexity"></option> */}
             {/* <option value="BR Demonz"></option> */}
           </datalist>
         </div>
