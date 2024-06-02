@@ -143,7 +143,7 @@ function Picks() {
     return imageURIs[imageURIs.length - 1].uri;
   }
 
-  const contractAddr = "0x1E430daB4124d462356F151727607BE02F3cB2d6";
+  const contractAddr = "0x77969f0EF52DA4BD2Ef352Be9f0991D5C5cF656d";
   const client = new NFTStorage({
     token: process.env.NEXT_PUBLIC_API_KEY as string,
   });
@@ -172,7 +172,7 @@ function Picks() {
           if (!team5) return toast.warning("Please select 5th team");
           if (!team6) return toast.warning("Please select 6th team");
 
-          setButtonText("Uploading your Picks...");
+          setButtonText("Loading Picks...");
           const response = await fetch(imageUrl[2]);
           const _blob = await response.blob();
           const metadata = await client.store({
@@ -195,7 +195,7 @@ function Picks() {
             args: [metadata?.url],
           });
           // setButtonText("Minting NFT...");
-          setButtonText("NFT Minted...");
+          setButtonText("Minting...");
           // console.log("NFT Minted");
           await sleep(5000);
           setButtonText("Mint");
@@ -239,7 +239,7 @@ function Picks() {
         <div className="flex justify-start flex-col gap-4 max-[1078px]:py-4 max-[1078px]:px-4 max-[580px]:w-full">
           <div className="flex flex-col items-center">
             <div className="max-w-s max-h-80 flex gap-4 items-center flex-col rounded-xl">
-              <h1 className=" text-white p-2 text-4xl font-medium bg-[#162036bc] rounded-lg">
+              <h1 className=" text-white p-2 text-4xl font-medium bg-[#162036bc] rounded-lg shadow-neon">
                 Make Your Predictions
               </h1>
               <div className="flex justify-center">
@@ -257,7 +257,7 @@ function Picks() {
                     <option value="DEFAULT" disabled>
                       Select Tournament
                     </option>
-                    <option>Round 1: AvsB</option>
+                    <option>Round 1: AvsC</option>
                     {/* <option>Split 1: May 2, AvsB</option>
                     <option>Split 1: May 2, AvsD</option> */}
                   </select>
@@ -431,7 +431,7 @@ function Picks() {
             <option value="WEAVE"></option>
             <option value="Tripods"></option>
             {/* Group B */}
-            <option value="Moist Esports"></option>
+            {/* <option value="Moist Esports"></option>
             <option value="Luminosity"></option>
             <option value="TSM"></option>
             <option value="Complexity"></option>
@@ -440,9 +440,9 @@ function Picks() {
             <option value="Ape Gang"></option>
             <option value="The Edgers"></option>
             <option value="NGNL Esports"></option>
-            <option value="Bored"></option> 
+            <option value="Bored"></option>  */}
             {/* Group C */}
-            {/* <option value="Cloud9"></option>
+            <option value="Cloud9"></option>
             <option value="Disguised"></option>
             <option value="Team Liquid"></option>
             <option value="FURIA"></option>
@@ -451,7 +451,7 @@ function Picks() {
             <option value="Oblivion"></option>
             <option value="Flat"></option>
             <option value="Stallions"></option>
-            <option value="Tempr"></option> */}
+            <option value="Tempr"></option>
 
             {/* Group D */}
             {/* <option value="Wonton Dumpling"></option> */}
