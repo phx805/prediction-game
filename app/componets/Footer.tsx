@@ -26,7 +26,7 @@ function Footer() {
           </div>
         </Link>
 
-        <Link href="">
+        <Link href="https://opensea.io/collection/split2algsna">
           <div className="hover:opacity-60 p-2 w-fit text-white rounded-md">
             <FaGlobe />
           </div>
