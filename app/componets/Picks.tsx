@@ -217,7 +217,7 @@ function Picks() {
   return (
     <div className="flex justify-center items-center h-full bg-cover bg-no-repeat bg-mint-bg">
       <div className="flex flex-col justify-center items-center gap-2 -translate-y-[160px] max-[1600px]:translate-x-[48px] max-[1520px]:translate-x-[86px] max-[1400px]:translate-x-[120px] max-[1386px]:hidden">
-        <span className="text-white py-1 px-2 bg-[#162036bc] rounded-lg text-[25px]">Research Teams</span>
+        <span className="text-white py-1 px-2 bg-[#162036bc] rounded-lg text-[25px] shadow-neon">Research Teams</span>
         <Link
           className="hover:bg-[#162036bc] p-4 rounded-lg"
           href="https://liquipedia.net/apexlegends/Apex_Legends_Global_Series/2024/Split_2/Pro_League/North_America/Round_1"
@@ -257,7 +257,7 @@ function Picks() {
                     <option value="DEFAULT" disabled>
                       Select Tournament
                     </option>
-                    <option>Round 1: AvsC</option>
+                    <option>Round 1: BvsC</option>
                     {/* <option>Split 1: May 2, AvsB</option>
                     <option>Split 1: May 2, AvsD</option> */}
                   </select>
@@ -405,6 +405,7 @@ function Picks() {
           {/* <h2 className="mt-2 text-center text-white">Avax</h2> */}
 
           <div className="w-full flex flex-col justify-center items-center">
+            <h3 className="text-white">.07 AVAX</h3>
             <Button
               text={buttonText}
               // className="text-white px-16 py-2 cursor-pointer hover:scale-110 rounded bg-gradient-to-b from-red-600 shadow-neon"
@@ -420,7 +421,7 @@ function Picks() {
 
           <datalist id="proTeams">
             {/* Group A */}
-            <option value="Team Falcons"></option>
+            {/* <option value="Team Falcons"></option>
             <option value="Spacestation Gaming"></option>
             <option value="Elev8 Gaming"></option>
             <option value="Oxygen Esports"></option>
@@ -429,9 +430,9 @@ function Picks() {
             <option value="Most Hated"></option>
             <option value="CCE UCX"></option>
             <option value="WEAVE"></option>
-            <option value="Tripods"></option>
+            <option value="Tripods"></option> */}
             {/* Group B */}
-            {/* <option value="Moist Esports"></option>
+            <option value="Moist Esports"></option>
             <option value="Luminosity"></option>
             <option value="TSM"></option>
             <option value="Complexity"></option>
@@ -440,7 +441,7 @@ function Picks() {
             <option value="Ape Gang"></option>
             <option value="The Edgers"></option>
             <option value="NGNL Esports"></option>
-            <option value="Bored"></option>  */}
+            <option value="Bored"></option> 
             {/* Group C */}
             <option value="Cloud9"></option>
             <option value="Disguised"></option>
@@ -468,7 +469,7 @@ function Picks() {
         </div>
       </div>
       <div className="flex flex-col justify-center items-center gap-2 -translate-y-[160px] max-[1600px]:-translate-x-[48px] max-[1520px]:-translate-x-[86px] max-[1400px]:-translate-x-[120px] max-[1386px]:hidden">
-        <span className="text-white py-1 px-4 bg-[#162036bc] rounded-lg text-[25px]">Elite Club</span>
+        <span className="text-white py-1 px-4 bg-[#162036bc] rounded-lg text-[25px] shadow-neon">Elite Club</span>
         <Link href="/Mint">
           <Image
             className="hover:bg-[#162036bc] p-4 rounded-lg w-[320px]"

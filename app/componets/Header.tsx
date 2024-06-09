@@ -29,7 +29,7 @@ function Header() {
         </Link> */}
         <Link href="/Profile" className="text-white"></Link>
         <Link href="/Tools" className="text-white"></Link>
-        <ConnectButton label="Connect" />
+        <ConnectButton label="Sign In" />
       </div>
       {visibleMenu && (
         <div

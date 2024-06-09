@@ -12,7 +12,7 @@ function Landing() {
   const router = useRouter();
   const playHandler = () => {
     if (isConnected) router.push("/Mint");
-    else toast.warning("Please connect your wallet.");
+    else toast.warning("Please Sign In.");
   };
   return (
     <main className="flex flex-col items-left gap-8 justify-start px-4 max-[1024px]:gap-4 max-[425px]:items-center">
