@@ -257,7 +257,7 @@ function Picks() {
                     <option value="DEFAULT" disabled>
                       Select Tournament
                     </option>
-                    <option>Round 2: AvsB</option>
+                    <option>Round 2: BvsC</option>
                     {/* <option>Split 1: May 2, AvsB</option>
                     <option>Split 1: May 2, AvsD</option> */}
                   </select>
@@ -421,7 +421,7 @@ function Picks() {
 
           <datalist id="proTeams">
             {/* Group A */}
-            <option value="Team Falcons"></option>
+            {/* <option value="Team Falcons"></option>
             <option value="Spacestation Gaming"></option>
             <option value="Elev8 Gaming"></option>
             <option value="Oxygen Esports"></option>
@@ -430,29 +430,29 @@ function Picks() {
             <option value="Most Hated"></option>
             <option value="CCE UCX"></option>
             <option value="WEAVE"></option>
-            <option value="Tripods"></option>
+            <option value="Tripods"></option> */}
             {/* Group B */}
             <option value="Moist Esports"></option>
             <option value="Luminosity"></option>
             <option value="TSM"></option>
             <option value="Complexity"></option>
-            <option value="SKD Mark"></option>
+            <option value="Bleed Esports"></option>
             <option value="Eternal Esports"></option>
-            <option value="Ape Gang"></option>
-            <option value="The Edgers"></option>
+            <option value="Fluffy Aimers"></option>
+            <option value="MPIRE Gaming"></option>
             <option value="NGNL Esports"></option>
             <option value="Bored"></option> 
             {/* Group C */}
-            {/* <option value="Cloud9"></option>
+            <option value="Cloud9"></option>
             <option value="Disguised"></option>
-            <option value="Team Liquid"></option>
+            <option value="Liquid Alienware"></option>
             <option value="FURIA"></option>
             <option value="Vanity"></option>
             <option value="Native Gaming"></option>
             <option value="Oblivion"></option>
             <option value="Flat"></option>
             <option value="Stallions"></option>
-            <option value="Tempr"></option> */}
+            <option value="Tempr"></option>
 
             {/* Group D */}
             {/* <option value="Wonton Dumpling"></option> */}
